@@ -40,9 +40,8 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
 
 ![GitHub Statistics](https://github-readme-stats.vercel.app/api?username=BX293APEN&show_icons=true&theme=github_dark)
 
-![trophy](https://github-profile-trophy.vercel.app/?username=BX293APEN&theme=onedark)
-
 <!--
+![trophy](https://github-profile-trophy.vercel.app/?username=BX293APEN&theme=onedark)
 &column=5
 &row  
 -->
