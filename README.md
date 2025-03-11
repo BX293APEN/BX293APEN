@@ -19,6 +19,7 @@ Here are some ideas to get you started:
 https://img.shields.io/badge/${subject}-${status}-${color}.svg
 -->
 
+<!--
 <p style="text-align: left;">
     <a href="https://github.com/BX293APEN">
         <img height="20" src="https://komarev.com/ghpvc/?username=BX293APEN" />
@@ -27,9 +28,7 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
         <img height="20" src="https://img.shields.io/github/followers/BX293APEN?label=follow&logo=github&style=flat" />
     </a>
 </p>
-
-![](https://raw.githubusercontent.com/BX293APEN/BX293APEN/output/github-contribution-grid-snake.svg)
-
+-->
 
 <p>
     <img src="https://img.shields.io/badge/-Raspberry%20Pi-C51A4A.svg?logo=raspberry-pi&style=flat">
@@ -37,8 +36,17 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
     <img src="https://img.shields.io/badge/-C++-333.svg?logo=cplusplus&style=flat">
 </p>
 
+![](https://raw.githubusercontent.com/BX293APEN/BX293APEN/output/github-contribution-grid-snake.svg)
+
 ![GitHub Statistics](https://github-readme-stats.vercel.app/api?username=BX293APEN&show_icons=true&theme=github_dark)
-![trophy](https://github-profile-trophy.vercel.app/?username=BX293APEN&column=5&theme=onedark)  
+
+![trophy](https://github-profile-trophy.vercel.app/?username=BX293APEN&theme=onedark)
+
+<!--
+&column=5
+&row  
+-->
+
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=BX293APEN&theme=github_dark)  
 
 
