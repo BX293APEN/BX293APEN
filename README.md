@@ -36,21 +36,7 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
     <img src="https://img.shields.io/badge/-C++-333.svg?logo=cplusplus&style=flat">
 </p>
 
-![](https://raw.githubusercontent.com/BX293APEN/BX293APEN/output/github-contribution-grid-snake.svg)
-
-![GitHub Statistics](https://github-readme-stats.vercel.app/api?username=BX293APEN&show_icons=true&theme=github_dark)
-
-<!--
-![trophy](https://github-profile-trophy.vercel.app/?username=BX293APEN&theme=onedark)
-&column=5
-&row  
--->
-
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=BX293APEN&theme=github_dark)  
-
-
-## 
-<p style="text-align: left;">
+<p style="text-align: left;vertical-align: top">
     <a href="https://github.com/BX293APEN/BX293APEN">
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=BX293APEN&repo=BX293APEN" />
     </a>
@@ -58,3 +44,28 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=BX293APEN&repo=aiccmd" />
     </a>
 </p>
+
+<table>
+    <tr>
+        <td>
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BX293APEN&theme=github_dark" />
+        </td>
+        <td>
+            <img src="https://github-readme-stats.vercel.app/api?username=BX293APEN&show_icons=true&theme=github_dark" />
+        </td>
+    </tr>
+</table>
+
+
+<!--
+![trophy](https://github-profile-trophy.vercel.app/?username=BX293APEN&theme=onedark)
+&column=5
+&row  
+-->
+
+##
+![](https://raw.githubusercontent.com/BX293APEN/BX293APEN/output/github-contribution-grid-snake.svg)
+
+
+
+
