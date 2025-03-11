@@ -27,6 +27,10 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
         <img height="20" src="https://img.shields.io/github/followers/BX293APEN?label=follow&logo=github&style=flat" />
     </a>
 </p>
+
+![](https://raw.githubusercontent.com/BX293APEN/BX293APEN/output/github-contribution-grid-snake.svg)
+
+
 <p>
     <img src="https://img.shields.io/badge/-Raspberry%20Pi-C51A4A.svg?logo=raspberry-pi&style=flat">
     <img src="https://img.shields.io/badge/-Python-F9DC3E.svg?logo=python&style=flat">
