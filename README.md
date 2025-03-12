@@ -65,17 +65,12 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
 &row  
 -->
 
-<div style = "
-    border-bottom: dotted;
-    color: green;
-"></div>
+<div class = "sep"></div>
 
 ![](https://raw.githubusercontent.com/BX293APEN/BX293APEN/output/github-contribution-grid-snake.svg)
 
-<div style = "
-    border-bottom: 1px solid;
-    color: gray;
-"></div>
+
+<div class = "sep"></div>
 
 <p>
     <a style = "
@@ -85,3 +80,12 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
         <img src="https://skillicons.dev/icons?i=github"/>
     </a>
 </p>
+
+<style scoped>
+
+.sep{
+    border-bottom: dotted;
+    color: green;
+}
+
+</style>
