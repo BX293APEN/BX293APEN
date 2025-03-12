@@ -14,6 +14,12 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
+<p style="text-align: right;vertical-align: top">
+    <a href="https://github.com/BX293APEN/BX293APEN/tree/main/note">
+        <img src="https://img.shields.io/badge/GitHub-How%20to%20Use%3F-181717.svg?logo=github&style=flat">
+    </a>
+</p>
+
 ## BX293APEN
 <!-- 
 https://img.shields.io/badge/${subject}-${status}-${color}.svg
@@ -64,8 +70,11 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
 -->
 
 ##
+<p style="text-align: right;vertical-align: top">
+    <a href="https://github.com/BX293APEN/BX293APEN/blob/main/note/README.md">
+        <img src="https://img.shields.io/badge/GitHub-How%20to%20Use%3F-181717.svg?logo=github&style=flat">
+    </a>
+</p>
+
 ![](https://raw.githubusercontent.com/BX293APEN/BX293APEN/output/github-contribution-grid-snake.svg)
-
-
-
 
