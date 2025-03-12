@@ -81,7 +81,7 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
     </a>
 </p>
 
-<style scoped>
+<style>
 
 .sep{
     border-bottom: dotted;
