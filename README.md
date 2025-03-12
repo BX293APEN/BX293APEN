@@ -73,10 +73,7 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
 <div class = "sep"></div>
 
 <p>
-    <a style = "
-        position: relative;
-        top: 10px;
-    " href ="https://github.com/BX293APEN/BX293APEN/blob/main/note/README.md"> 
+    <a href ="https://github.com/BX293APEN/BX293APEN/blob/main/note/README.md"> 
         <img src="https://skillicons.dev/icons?i=github"/>
     </a>
 </p>
