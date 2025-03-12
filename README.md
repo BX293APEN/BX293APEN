@@ -59,6 +59,12 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
 -->
 
 ##
+<p align="right">
+    <a href="https://github.com/BX293APEN/BX293APEN/tree/main/note">
+        <img src="https://img.shields.io/badge/GitHub-How%20to%20Use%3F-181717.svg?logo=github&style=flat">
+    </a>
+</p>
+
 ![](https://raw.githubusercontent.com/BX293APEN/BX293APEN/output/github-contribution-grid-snake.svg)
 
 <p align="right">
