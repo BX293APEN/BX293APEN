@@ -28,7 +28,7 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
 <p align="left">
     <img src="https://img.shields.io/badge/-Raspberry%20Pi-C51A4A.svg?logo=raspberry-pi&style=flat">
     <img src="https://img.shields.io/badge/-Python-F9DC3E.svg?logo=python&style=flat">
-    <a href="https://github.com/BX293APEN/BX293APEN/tree/main/note">
+    <a href="https://github.com/BX293APEN/BX293APEN/tree/main/note/OpenCV">
         <img src="https://img.shields.io/badge/-C++-333.svg?logo=cplusplus&style=flat">
     </a>
 </p>
