@@ -14,24 +14,29 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-## BX293APEN
+<h1 align="left"> 
+    BX293APEN 
+    <a href="https://github.com/BX293APEN/BX293APEN/blob/main/note/README.md">
+        <img src="https://img.shields.io/badge/-GitHub-181717.svg?logo=github&style=flat">
+    </a>
+    <img src="https://img.shields.io/badge/-Raspberry%20Pi-C51A4A.svg?logo=raspberry-pi&style=flat">
+    <img src="https://img.shields.io/badge/-Python-F9DC3E.svg?logo=python&style=flat">
+    <a href="https://github.com/BX293APEN/BX293APEN/tree/main/note/OpenCV">
+        <img src="https://img.shields.io/badge/-C++-333.svg?logo=cplusplus&style=flat">
+    </a>
+</h1>
+
 <!-- 
 https://img.shields.io/badge/${subject}-${status}-${color}.svg
 -->
 
 <p align="right">
     <a href="https://github.com/BX293APEN/BX293APEN/tree/main/note">
-        <img src="https://img.shields.io/badge/GitHub-How%20to%20Use%3F-181717.svg?logo=github&style=flat">
+        <img src="https://img.shields.io/badge/GitHub-Help-181717.svg?logo=github&style=flat">
     </a>
 </p>
 
-<p align="left">
-    <img src="https://img.shields.io/badge/-Raspberry%20Pi-C51A4A.svg?logo=raspberry-pi&style=flat">
-    <img src="https://img.shields.io/badge/-Python-F9DC3E.svg?logo=python&style=flat">
-    <a href="https://github.com/BX293APEN/BX293APEN/tree/main/note/OpenCV">
-        <img src="https://img.shields.io/badge/-C++-333.svg?logo=cplusplus&style=flat">
-    </a>
-</p>
+
 
 <p align="left">
     <a href="https://github.com/BX293APEN/BX293APEN">
@@ -60,11 +65,23 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
 &row  
 -->
 
-##
-<p align="right">
-    <a href="https://github.com/BX293APEN/BX293APEN/blob/main/note/README.md">
-        <img src="https://img.shields.io/badge/-GitHub-181717.svg?logo=github&style=flat">
-    </a>
-</p>
+<div style = "
+    border-bottom: dotted;
+    color: green;
+"></div>
 
 ![](https://raw.githubusercontent.com/BX293APEN/BX293APEN/output/github-contribution-grid-snake.svg)
+
+<div style = "
+    border-bottom: 1px solid;
+    color: gray;
+"></div>
+
+<p>
+    <a style = "
+        position: relative;
+        top: 10px;
+    " href ="https://github.com/BX293APEN/BX293APEN/blob/main/note/README.md"> 
+        <img src="https://skillicons.dev/icons?i=github"/>
+    </a>
+</p>

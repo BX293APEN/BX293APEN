@@ -5,6 +5,13 @@
 | **Git**       | 分散型バージョン管理システム |
 | **GitHub**    | Git を利用したWebアプリケーション|
 ## gitコマンドの使い方
+
+<a href ="https://gitforwindows.org/"> 
+    <img src="https://skillicons.dev/icons?i=git"/>
+</a>
+
+[**Install**](https://gitforwindows.org/)
+
 ### 設定
 #### ユーザ登録
 ```
@@ -160,3 +167,7 @@ git merge --abort
 ```
 git update-git-for-windows
 ```
+
+## Reference
+> - [Git インストール方法](https://qiita.com/T-H9703EnAc/items/4fbe6593d42f9a844b1c)  
+> - [GitHub アカウント作成方法](https://qiita.com/ayatokura/items/9eabb7ae20752e6dc79d)
