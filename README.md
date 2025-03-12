@@ -65,24 +65,15 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
 &row  
 -->
 
-<div class = "sep"></div>
+---
 
 ![](https://raw.githubusercontent.com/BX293APEN/BX293APEN/output/github-contribution-grid-snake.svg)
 
 
-<div class = "sep"></div>
+---
 
 <p>
     <a href ="https://github.com/BX293APEN/BX293APEN/blob/main/note/README.md"> 
         <img src="https://skillicons.dev/icons?i=github"/>
     </a>
 </p>
-
-<style>
-
-.sep{
-    border-bottom: dotted;
-    color: green;
-}
-
-</style>
