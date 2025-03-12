@@ -14,18 +14,18 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-<p align="right">
-    <a href="https://github.com/BX293APEN/BX293APEN/tree/main/note">
-        <img src="https://img.shields.io/badge/GitHub-How%20to%20Use%3F-181717.svg?logo=github&style=flat">
-    </a>
-</p>
-
 ## BX293APEN
 <!-- 
 https://img.shields.io/badge/${subject}-${status}-${color}.svg
 -->
 
 <p align="right">
+    <a href="https://github.com/BX293APEN/BX293APEN/tree/main/note">
+        <img src="https://img.shields.io/badge/GitHub-How%20to%20Use%3F-181717.svg?logo=github&style=flat">
+    </a>
+</p>
+
+<p align="left">
     <img src="https://img.shields.io/badge/-Raspberry%20Pi-C51A4A.svg?logo=raspberry-pi&style=flat">
     <img src="https://img.shields.io/badge/-Python-F9DC3E.svg?logo=python&style=flat">
     <img src="https://img.shields.io/badge/-C++-333.svg?logo=cplusplus&style=flat">
