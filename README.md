@@ -36,8 +36,6 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
     </a>
 </p>
 
-
-
 <p align="left">
     <a href="https://github.com/BX293APEN/BX293APEN">
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=BX293APEN&repo=BX293APEN" />
@@ -58,17 +56,12 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
     </tr>
 </table>
 
+![trophy](https://github-profile-trophy.vercel.app/?username=BX293APEN&theme=onedark)
 
 <!--
-![trophy](https://github-profile-trophy.vercel.app/?username=BX293APEN&theme=onedark)
 &column=5
 &row  
 -->
-
----
-
-![](https://raw.githubusercontent.com/BX293APEN/BX293APEN/output/github-contribution-grid-snake.svg)
-
 
 ---
 
@@ -77,3 +70,5 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
         <img src="https://skillicons.dev/icons?i=github"/>
     </a>
 </p>
+
+![](https://raw.githubusercontent.com/BX293APEN/BX293APEN/output/github-contribution-grid-snake.svg)
