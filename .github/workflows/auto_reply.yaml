@@ -1,0 +1,33 @@
+name: Issue Auto Response
+
+on:
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
+
+jobs:
+  auto-response:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: リポジトリのチェックアウト
+      uses: actions/checkout@v2
+
+    - name: 依存関係のインストール
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.13'
+        cache: 'pip' # caching pip dependencies
+
+    - run: |
+          python -m pip install --upgrade pip
+          pip install -r .github/module/requirements.txt
+
+    - name: スクリプトの実行
+      run: python .github/scripts/issue_auto_reply.py
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        GITHUB_REPOSITORY: ${{ github.repository }}
+        GITHUB_EVENT_ISSUE_NUMBER: ${{ github.event.issue.number }}
+        GITHUB_EVENT_COMMENT_ID: ${{ github.event.comment.id }}
