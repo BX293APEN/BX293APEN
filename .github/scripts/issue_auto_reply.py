@@ -47,30 +47,30 @@ class CreateMessage(MySQLite):
             self.categoryData = "Thank you for comment."
     
     def get_message(self):
-        if self.categoryData == "date":
+        if self.categoryData.count("date")>0:
             return  f"{self.nowTime.year}年 {self.nowTime.month}月 {self.nowTime.day}日 {self.weekdayName[self.nowTime.weekday()]}曜日です"
-        elif self.categoryData == "time":
+        elif self.categoryData.count("time")>0:
             return f"{self.nowTime.hour}:{self.nowTime.minute}だよ"
-        elif self.categoryData == "weather":
+        elif self.categoryData.count("weather")>0:
             return self.get_weather()
         
-        elif self.categoryData == "morse":
+        elif self.categoryData.count("morse")>0:
             return self.exchange(
                 morsestr = self.message.split("モールス信号:")[1]
             )
         
-        elif self.categoryData == "jamcode":
+        elif self.categoryData.count("jamcode")>0:
             return self.morse_decode(
                 morseCode = self.message.split("日文モールス復号:")[1],
                 lang = "ja"
             )
-        elif self.categoryData == "eumcode":
+        elif self.categoryData.count("eumcode")>0:
             return self.morse_decode(
                 morseCode = self.message.split("欧文モールス復号:")[1],
                 lang = "eu"
             )
         
-        elif self.categoryData == "help":
+        elif self.categoryData.count("help")>0:
             with open(f"{os.path.dirname(os.path.abspath(__file__))}/README.md") as readme:
                 return readme.read()
         
@@ -90,22 +90,22 @@ class CreateMessage(MySQLite):
                         ORDER BY id ASC
                 """)[0][0]
 
-                if self.categoryData == "おやすみ":
+                if self.categoryData.count("おやすみ")>0:
                     return "おやすみzzz..."
                 
-                elif self.categoryData == "おかえり":
+                elif self.categoryData.count("おかえり")>0:
                     return "ただいま"
 
-                elif self.categoryData == "ただいま":
+                elif self.categoryData.count("ただいま")>0:
                     return "おかえり"
 
-                elif self.categoryData == "ありがと":
+                elif self.categoryData.count("ありがと")>0:
                     return "どういたしまして(*´ω｀*)〜♪"
 
-                elif self.categoryData =="どうした":
+                elif self.categoryData.count("どうした")>0:
                     return "コメントに反応しただけだよ"
 
-                elif self.categoryData =="どした":
+                elif self.categoryData.count("どした")>0:
                     return "コメントに反応しただけだよ"
                 
                 else:
