@@ -178,13 +178,13 @@ class CreateMessage(MySQLite):
         return f"""
 # {str(weatherDate)}の{weartherTitle}は{weather}
 
+{telop}
+
 <p align="right">
     <a href = "{url}">
         <img src = "{svgWeatherURL}">
     </a>
 </p>
-
-{telop}
 
 ## 最高気温
 {tempMax}℃
