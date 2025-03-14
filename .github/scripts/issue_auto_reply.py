@@ -115,9 +115,8 @@ class CreateMessage(MySQLite):
                         SELECT value FROM keywordlist
                             WHERE key = "{self.categoryData}"
                     """)
-
-                ansIndex = random.randint(0, len(rep)-1) # 最小値以上最大値未満の浮動小数点数
-                return rep[ansIndex][0]
+                    ansIndex = random.randint(0, len(rep)-1) # 最小値以上最大値未満の浮動小数点数
+                    return rep[ansIndex][0]
             
             except Exception as e:
                 print(e)
@@ -131,29 +130,17 @@ class CreateMessage(MySQLite):
         else:
             dateNumber = 0
         jsonURL = "https://weather.tsukumijima.net/api/forecast/city/"
-        if (self.message.count("都")>0):
-            prefecture = self.message.split("都")[0]
-        elif (self.message.count("道")>0):
-            prefecture = self.message.split("道")[0]
-        elif (self.message.count("府")>0 ):
-            prefecture = self.message.split("府")[0]
-        elif(self.message.count("県")>0 ):
-            prefecture = self.message.split("県")[0]
-        else:
-            prefecture = "東京"
-        if (prefecture.count("神奈川") > 0 or prefecture.count("和歌山") > 0 or prefecture.count("鹿児島") > 0):
-            prefecture = prefecture[-3:]
-        else:
-            prefecture = prefecture[-2:]
-        
+
         try:
             cityID = self.send_sql(f"""
                 SELECT id FROM weather 
-                    WHERE prefecture = "{prefecture}"
+                    WHERE "{self.message}" LIKE CONCAT("%",prefecture,"%")
                     ORDER BY id ASC
             """)[0][0]
+            
         except:
             cityID              = "130010"
+            
         url                     = f"{jsonURL}{cityID}"
         
         weatherData             = requests.get(url)
