@@ -147,30 +147,30 @@ class CreateMessage(MySQLite):
                     ORDER BY id ASC
             """)[0][0]
         except:
-            cityID = "130010"
-        url = f"{jsonURL}{cityID}"
+            cityID              = "130010"
+        url                     = f"{jsonURL}{cityID}"
         
-        weatherData = requests.get(url)
-        weatherJSONData = json.loads(weatherData.text)
-        weatherDate = weatherJSONData["forecasts"][dateNumber]["date"]
-        weartherTitle = weatherJSONData["title"]
+        weatherData             = requests.get(url)
+        weatherJSONData         = json.loads(weatherData.text)
+        weatherDate             = weatherJSONData["forecasts"][dateNumber]["date"]
+        weartherTitle           = weatherJSONData["title"]
         if dateNumber == 2:
-            weather = weatherJSONData["forecasts"][dateNumber]["telop"]
+            weather             = weatherJSONData["forecasts"][dateNumber]["telop"]
         else:
-            weather = weatherJSONData["forecasts"][dateNumber]["detail"]["weather"]
-        tempMin = weatherJSONData["forecasts"][dateNumber]["temperature"]["min"]["celsius"]
-        tempMax = weatherJSONData["forecasts"][dateNumber]["temperature"]["max"]["celsius"]
-        telop = weatherJSONData["description"]["text"].replace("　","")
-        chanceOfRain0_6 = weatherJSONData["forecasts"][dateNumber]["chanceOfRain"]["T00_06"]
-        chanceOfRain6_12 = weatherJSONData["forecasts"][dateNumber]["chanceOfRain"]["T06_12"]
-        chanceOfRain12_18 = weatherJSONData["forecasts"][dateNumber]["chanceOfRain"]["T12_18"]
-        chanceOfRain18_24 = weatherJSONData["forecasts"][dateNumber]["chanceOfRain"]["T18_24"]
-        chanceOfRain = f"""
+            weather             = weatherJSONData["forecasts"][dateNumber]["detail"]["weather"]
+        tempMin                 = weatherJSONData["forecasts"][dateNumber]["temperature"]["min"]["celsius"]
+        tempMax                 = weatherJSONData["forecasts"][dateNumber]["temperature"]["max"]["celsius"]
+        telop                   = weatherJSONData["description"]["text"].replace("　","")
+        chanceOfRain0_6         = weatherJSONData["forecasts"][dateNumber]["chanceOfRain"]["T00_06"]
+        chanceOfRain6_12        = weatherJSONData["forecasts"][dateNumber]["chanceOfRain"]["T06_12"]
+        chanceOfRain12_18       = weatherJSONData["forecasts"][dateNumber]["chanceOfRain"]["T12_18"]
+        chanceOfRain18_24       = weatherJSONData["forecasts"][dateNumber]["chanceOfRain"]["T18_24"]
+        chanceOfRain            = f"""
 0時～6時 : {chanceOfRain0_6}
 6時～12時 : {chanceOfRain6_12}
 12時～18時 : {chanceOfRain12_18}
 18時～24時 : {chanceOfRain18_24}"""
-        svgWeatherURL = weatherJSONData["forecasts"][dateNumber]["image"]["url"]
+        svgWeatherURL           = weatherJSONData["forecasts"][dateNumber]["image"]["url"]
 
         return f"""
 # {str(weatherDate)}の{weartherTitle}は{weather}
@@ -244,15 +244,18 @@ class CreateMessage(MySQLite):
             else:
                 code = code.lower()
 
-            try:
-                val.append(
-                    self.send_sql(f"""
-                        SELECT value FROM morse
-                        WHERE data = "{code}"
-                    """)[0][0]
-                )
-            except:
-                val.append("")
+            if code == "space":
+                val.append(" ")
+            else:
+                try:
+                    val.append(
+                        self.send_sql(f"""
+                            SELECT value FROM morse
+                            WHERE data = "{code}"
+                        """)[0][0]
+                    )
+                except:
+                    val.append("")
 
         return " ".join(val)
     
