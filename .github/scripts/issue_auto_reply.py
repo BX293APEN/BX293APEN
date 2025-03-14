@@ -83,12 +83,8 @@ class CreateMessage(MySQLite):
                 for n in replyData:
                     if int(self.message.count(n[0])) > 0:
                         self.message = self.message.split(n[0])[1]
-
-                self.categoryData = self.send_sql(f"""
-                    SELECT category FROM emotion 
-                        WHERE "{self.message}" LIKE CONCAT("%",data,"%")
-                        ORDER BY id ASC
-                """)[0][0]
+                
+                self.classify_message(self.message)
 
                 if self.categoryData.count("おやすみ")>0:
                     return "おやすみzzz..."
@@ -116,6 +112,7 @@ class CreateMessage(MySQLite):
 
                 ansIndex = random.randint(0, len(rep)-1) # 最小値以上最大値未満の浮動小数点数
                 return rep[ansIndex][0]
+            
             except Exception as e:
                 print(e)
                 return self.categoryData
@@ -267,22 +264,25 @@ class CreateMessage(MySQLite):
             language = "en"
         for mcode in morseCodeData:
             try:
-                
-                code = self.send_sql(f"""
-                    SELECT data FROM morse
-                    WHERE value = "{mcode}"
-                    AND (
-                        lang = "{language}" OR
-                        lang = "base"
-                    )
-
-                """)[0][0]
-                if code == "濁点":
-                    ans += "゛"
-                elif code == "半濁点":
-                    ans += "゜"
+                if mcode == "":
+                    ans += " "
+                    
                 else:
-                    ans += code
+                    code = self.send_sql(f"""
+                        SELECT data FROM morse
+                        WHERE value = "{mcode}"
+                        AND (
+                            lang = "{language}" OR
+                            lang = "base"
+                        )
+
+                    """)[0][0]
+                    if code == "濁点":
+                        ans += "゛"
+                    elif code == "半濁点":
+                        ans += "゜"
+                    else:
+                        ans += code
             except:
                 ans += " "
         return ans
