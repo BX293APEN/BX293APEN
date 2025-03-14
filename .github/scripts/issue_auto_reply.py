@@ -27,24 +27,24 @@ class MySQLite():
 
 class CreateMessage(MySQLite):
     def __init__(self, admin, db = f"{os.path.dirname(os.path.abspath(__file__))}/sqlite3.db"):
-        self.nowTime = datetime.datetime.now(ZoneInfo("Asia/Tokyo"))
-        self.weekdayName = ("月","火","水","木","金","土","日")
+        self.nowTime            = datetime.datetime.now(ZoneInfo("Asia/Tokyo"))
+        self.weekdayName        = ("月","火","水","木","金","土","日")
         super().__init__(db)
-        self.admin = admin
-        self.hiragana = re.compile(r'[\u3041-\u3096]') #ひらがなの登録
-        self.katakana = re.compile(r'[\u30A0-\u30FA]') #カタカナの登録
+        self.admin              = admin
+        self.hiragana           = re.compile(r'[\u3041-\u3096]') #ひらがなの登録
+        self.katakana           = re.compile(r'[\u30A0-\u30FA]') #カタカナの登録
 
     def classify_message(self, message):
-        self.message = message
+        self.message            = message
         try:
-            self.categoryData = self.send_sql(f"""
+            self.categoryData   = self.send_sql(f"""
                 SELECT category FROM emotion 
                     WHERE "{self.message}" LIKE CONCAT("%",data,"%")
                     ORDER BY id ASC
             """)[0][0]
         except Exception as e:
             print(e)
-            self.categoryData = "Thank you for comment."
+            self.categoryData   = "Thank you for comment."
     
     def get_message(self):
         if self.categoryData.count("date")>0:
@@ -96,7 +96,7 @@ class CreateMessage(MySQLite):
                     SELECT value FROM keywordlist
                         WHERE "{self.categoryData}" LIKE CONCAT("%",key,"%")
                 """)
-                ansIndex = random.randint(0, len(rep)-1) # 最小値以上最大値未満の浮動小数点数
+                ansIndex = random.randint(0, len(rep)-1) # 最小値以上最大値以下の整数
                 return rep[ansIndex][0]
             
             except Exception as e:
@@ -277,26 +277,26 @@ class GitProject(Github):
         self.admin          = admin
         
         super().__init__(self.token) # GitHubクライアントを初期化
-        self.repo       = self.get_repo(self.repo_name)
-        self.issue      = self.repo.get_issue(int(self.issue_number))
-        self.comments   = list(self.issue.get_comments())
-        self.db         = db
+        self.repo           = self.get_repo(self.repo_name)
+        self.issue          = self.repo.get_issue(int(self.issue_number))
+        self.comments       = list(self.issue.get_comments())
+        self.db             = db
     
     def recv_issue(self): # issueにコメントを追加
         # self.username:
-        self.data = ""
+        self.data           = ""
         try:
-            latest_comment = self.comments[-1]
+            latest_comment  = self.comments[-1]
             if latest_comment.body[0] == self.target:
-                self.data = latest_comment.body.replace("$","")
+                self.data   = latest_comment.body.replace("$","")
         except:
-            self.data = "issue"
+            self.data       = "issue"
     
     def send_issue(self):
         if self.data != "":
             with CreateMessage(self.admin, self.db) as msg:
                 msg.classify_message(self.data)
-                message = msg.get_message()
+                message     = msg.get_message()
             
             self.issue.create_comment(message)
 
