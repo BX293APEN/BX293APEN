@@ -236,15 +236,13 @@ class CreateMessage(MySQLite):
             else:
                 code = code.lower()
 
-            if code == "space":
-                val += " "
-            
-            else:
+            if code != "space":
                 val += self.send_sql(f"""
                     SELECT value FROM morse
                     WHERE data = "{code}"
                 """)[0][0]
-                val += " "
+            val += " "
+
         return val
     
     def morse_decode(self, morseCode:str, lang = "ja"):
@@ -255,7 +253,8 @@ class CreateMessage(MySQLite):
             language = "en"
         for mcode in morseCodeData:
             try:
-                ans += self.send_sql(f"""
+                
+                code = self.send_sql(f"""
                     SELECT data FROM morse
                     WHERE value = "{mcode}"
                     AND (
@@ -264,6 +263,12 @@ class CreateMessage(MySQLite):
                     )
 
                 """)[0][0]
+                if code == "濁点":
+                    ans += "゛"
+                elif code == "半濁点":
+                    ans += "゜"
+                else:
+                    ans += code
             except:
                 ans += " "
         return ans
