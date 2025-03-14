@@ -237,7 +237,7 @@ class CreateMessage(MySQLite):
                 code = code.lower()
 
             if code == "space":
-                val += "  "
+                val += " "
             
             else:
                 val += self.send_sql(f"""
@@ -265,7 +265,7 @@ class CreateMessage(MySQLite):
 
                 """)[0][0]
             except:
-                continue
+                ans += " "
         return ans
 
 
