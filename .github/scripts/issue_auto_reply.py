@@ -55,9 +55,15 @@ class CreateMessage(MySQLite):
             return self.get_weather()
         
         elif self.categoryData.count("morse")>0:
-            return self.exchange(
-                morsestr = self.message.split("モールス信号:")[1]
-            )
+            return f"""
+```
+{
+    self.exchange(
+        morsestr = self.message.split("モールス信号:")[1]
+    )
+}
+```
+            """
         
         elif self.categoryData.count("jamcode")>0:
             return self.morse_decode(
