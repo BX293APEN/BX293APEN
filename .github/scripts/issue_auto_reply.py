@@ -88,35 +88,16 @@ class CreateMessage(MySQLite):
                 """)
                 for n in replyData:
                     if int(self.message.count(n[0])) > 0:
-                        self.message = self.message.split(n[0])[1]
+                        self.message = self.message.split(n[0])[-1]
                 
                 self.classify_message(self.message)
-
-                if self.categoryData.count("おやすみ")>0:
-                    return "おやすみzzz..."
                 
-                elif self.categoryData.count("おかえり")>0:
-                    return "ただいま"
-
-                elif self.categoryData.count("ただいま")>0:
-                    return "おかえり"
-
-                elif self.categoryData.count("ありがと")>0:
-                    return "どういたしまして(*´ω｀*)〜♪"
-
-                elif self.categoryData.count("どうした")>0:
-                    return "コメントに反応しただけだよ"
-
-                elif self.categoryData.count("どした")>0:
-                    return "コメントに反応しただけだよ"
-                
-                else:
-                    rep = self.send_sql(f"""
-                        SELECT value FROM keywordlist
-                            WHERE key = "{self.categoryData}"
-                    """)
-                    ansIndex = random.randint(0, len(rep)-1) # 最小値以上最大値未満の浮動小数点数
-                    return rep[ansIndex][0]
+                rep = self.send_sql(f"""
+                    SELECT value FROM keywordlist
+                        WHERE "{self.categoryData}" LIKE CONCAT("%",key,"%")
+                """)
+                ansIndex = random.randint(0, len(rep)-1) # 最小値以上最大値未満の浮動小数点数
+                return rep[ansIndex][0]
             
             except Exception as e:
                 print(e)
