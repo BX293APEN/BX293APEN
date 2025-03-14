@@ -188,7 +188,7 @@ class CreateMessage(MySQLite):
         """
     
     def exchange(self, morsestr):
-        val = ""
+        val = []
         for code in morsestr:
             if code == "　":
                 code = "space"
@@ -204,10 +204,12 @@ class CreateMessage(MySQLite):
                 hkm = jaconv.h2z(hkataka[0])
                 try:
                     hka = jaconv.h2z(hkataka[1])
-                    val += self.send_sql(f"""
-                        SELECT value FROM morse
-                        WHERE data = "{jaconv.kata2hira(hkm)}"
-                    """)[0][0]
+                    val.append(
+                        self.send_sql(f"""
+                            SELECT value FROM morse
+                            WHERE data = "{jaconv.kata2hira(hkm)}"
+                        """)[0][0]
+                    )
                     if hka == '\uFF9E':
                         code = "濁点"
                     elif hka == '\uFF9F':
@@ -221,10 +223,12 @@ class CreateMessage(MySQLite):
                 hkm = jaconv.h2z(hkataka[0])
                 try:
                     hka = jaconv.h2z(hkataka[1])
-                    val += self.send_sql(f"""
-                        SELECT value FROM morse
-                        WHERE data = "{jaconv.kata2hira(hkm)}"
-                    """)[0][0]
+                    val.append(
+                        self.send_sql(f"""
+                            SELECT value FROM morse
+                            WHERE data = "{jaconv.kata2hira(hkm)}"
+                        """)[0][0]
+                    )
                     if hka == '\uFF9E':
                         code = "濁点"
                     elif hka == '\uFF9F':
@@ -237,14 +241,16 @@ class CreateMessage(MySQLite):
                 code = code.lower()
 
             try:
-                val += self.send_sql(f"""
-                    SELECT value FROM morse
-                    WHERE data = "{code}"
-                """)[0][0]
-            finally:
-                val += " "
+                val.append(
+                    self.send_sql(f"""
+                        SELECT value FROM morse
+                        WHERE data = "{code}"
+                    """)[0][0]
+                )
+            except:
+                val.append("")
 
-        return val
+        return " ".join(val)
     
     def morse_decode(self, morseCode:str, lang = "ja"):
         morseCodeData = morseCode.split(" ")
