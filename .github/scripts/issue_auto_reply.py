@@ -236,12 +236,13 @@ class CreateMessage(MySQLite):
             else:
                 code = code.lower()
 
-            if code != "space":
+            try:
                 val += self.send_sql(f"""
                     SELECT value FROM morse
                     WHERE data = "{code}"
                 """)[0][0]
-            val += " "
+            finally:
+                val += " "
 
         return val
     
