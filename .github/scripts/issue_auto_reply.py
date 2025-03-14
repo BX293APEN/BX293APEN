@@ -310,7 +310,7 @@ class GitProject(Github):
         self.data = ""
         try:
             latest_comment = self.comments[-1]
-            if latest_comment.body.count("$") > 0:
+            if latest_comment.body[0] == self.target:
                 self.data = latest_comment.body.replace("$","")
         except:
             self.data = "issue"
