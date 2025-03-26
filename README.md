@@ -69,6 +69,12 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
     <a href ="https://github.com/BX293APEN/BX293APEN/blob/main/note/README.md"> 
         <img src="https://skillicons.dev/icons?i=github"/>
     </a>
+    <a href ="https://github.com/niXman/mingw-builds-binaries/releases"> 
+        <img src="https://skillicons.dev/icons?i=c"/>
+    </a>
+    <a href ="https://gnuwin32.sourceforge.net/packages/make.htm"> 
+        <img src="https://skillicons.dev/icons?i=cmake"/>
+    </a>
     <a href ="https://github.com/BX293APEN/BX293APEN/blob/main/note/Vim/README.md"> 
         <img src="https://skillicons.dev/icons?i=vim"/>
     </a>
