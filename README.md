@@ -19,8 +19,12 @@ Here are some ideas to get you started:
     <a href="https://github.com/BX293APEN/BX293APEN/blob/main/note/README.md">
         <img src="https://img.shields.io/badge/-GitHub-181717.svg?logo=github&style=flat">
     </a>
-    <img src="https://img.shields.io/badge/-Raspberry%20Pi-C51A4A.svg?logo=raspberry-pi&style=flat">
-    <img src="https://img.shields.io/badge/-Python-F9DC3E.svg?logo=python&style=flat">
+    <a href="https://www.raspberrypi.com/software/">
+        <img src="https://img.shields.io/badge/-Raspberry%20Pi-C51A4A.svg?logo=raspberry-pi&style=flat">
+    </a>
+    <a href="https://www.python.org/">
+        <img src="https://img.shields.io/badge/-Python-F9DC3E.svg?logo=python&style=flat">
+    </a>
     <a href="https://github.com/BX293APEN/BX293APEN/tree/main/note/OpenCV">
         <img src="https://img.shields.io/badge/-C++-333.svg?logo=cplusplus&style=flat">
     </a>
