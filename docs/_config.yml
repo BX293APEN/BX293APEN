@@ -1,9 +1,8 @@
-theme: jekyll-theme-minima
 # theme: jekyll-theme-cayman
 # theme: jekyll-theme-midnight
 # theme: jekyll-theme-slate
 # theme: jekyll-theme-minimal
-# theme: jekyll-theme-dinky
+theme: jekyll-theme-dinky
 show_downloads: false
 plugins:
   - jekyll-sitemap
