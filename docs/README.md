@@ -88,7 +88,3 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
 </p>
 
 ![](https://raw.githubusercontent.com/BX293APEN/BX293APEN/output/github-contribution-grid-snake.svg)
-
-<script>
-    document.querySelector("div").style.fontFamily = "HGPゴシックE, Arial, sans-serif";
-</script>
