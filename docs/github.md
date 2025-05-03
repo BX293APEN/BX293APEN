@@ -1,9 +1,21 @@
 # GitHub
 ## 用語
-| 用語          | 説明 |
-| -             | - |
-| **Git**       | 分散型バージョン管理システム |
-| **GitHub**    | Git を利用したWebアプリケーション|
+
+<table>
+    <tr>
+        <th>用語</th>
+        <th>説明</th>
+    </tr>
+    <tr>
+        <td><b>Git</b></td>
+        <td>分散型バージョン管理システム</td>
+    </tr>
+    <tr>
+        <td><b>GitHub</b></td>
+        <td>Git を利用したWebアプリケーション</td>
+    </tr>
+</table>
+
 ## gitコマンドの使い方
 
 <a href ="https://gitforwindows.org/"> 
