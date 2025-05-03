@@ -1,10 +1,2 @@
-# theme: jekyll-theme-cayman
-# theme: jekyll-theme-midnight
-# theme: jekyll-theme-slate
-# theme: jekyll-theme-minimal
-theme: jekyll-theme-dinky
-show_downloads: false
 plugins:
   - jekyll-sitemap
-sass:
-  style: compressed
