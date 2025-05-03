@@ -229,10 +229,10 @@
     </tr>
     <tr>
         <td>
-            <code>/<正規表現文字列></code> 
+            <code>/[正規表現文字列]</code> 
         </td>
         <td>
-            <code><正規表現文字列></code>を上から下へ検索
+            <code>[正規表現文字列]</code>を上から下へ検索
         </td>
     </tr>
     <tr>
@@ -262,18 +262,18 @@
     </tr>
     <tr>
         <td>
-            <code>:%s;<置換前文字列>;<置換後文字列></code>
+            <code>:%s;[置換前文字];[置換後文字列]</code>
         </td>
         <td>
-            <code><置換前文字列></code>を<code><置換後文字列></code>に全て変更
+            <code>[置換前文字列]</code>を<code>[置換後文字列]</code>に全て変更
         </td>
     </tr>
     <tr>
         <td>
-            <code>:%s/<置換前文字列>/<置換後文字列></code>
+            <code>:%s/[置換前文字列]/[置換後文字列]</code>
         </td>
         <td>
-            <code><置換前文字列></code>を<code><置換後文字列></code>に全て変更
+            <code>[置換前文字列]</code>を<code>[置換後文字列]</code>に全て変更
         </td>
     </tr>
 </table>
