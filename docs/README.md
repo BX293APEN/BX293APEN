@@ -88,3 +88,7 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
 </p>
 
 ![](https://raw.githubusercontent.com/BX293APEN/BX293APEN/output/github-contribution-grid-snake.svg)
+
+<script>
+    document.querySelector("body").style.fontFamily = "Arial, sans-serif";
+</script>
