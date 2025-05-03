@@ -1,0 +1,1 @@
+document.querySelector("body").style.fontFamily = "Arial, sans-serif";
