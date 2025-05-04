@@ -13,7 +13,7 @@
         <link rel="icon" href="../img/PEN.ico">
         <script src="../model/index/index.js"></script>
 
-        <title>BX293A_PEN</title>
+        <title>RN4020</title>
     </head>
     <body>
         <header data-bs-theme="dark">
@@ -26,40 +26,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="../index.html">
-                                    Home
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="../html/welcome.html">
-                                    Works
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav mb-2 mb-md-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://github.com/BX293APEN">
-                                    <img src = "../img/GitHub.png" height= "40px" width="40px">
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://discord.gg/hszD9jqpq2">
-                                    <img src = "../img/game.ico" height= "40px" width="40px">
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://bsky.app/profile/bx293apen.bsky.social">
-                                    <img src = "../img/BlueSky.png" height= "40px" width="40px">
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://x.com/BX293A_PEN">
-                                    <img src = "../img/X.png" height= "40px" width="40px">
-                                </a>
-                            </li>
-                        </ul>
+                        <div id="header-title"></div>
                         <span class="ms-3 d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchbox">
                         </span>
@@ -364,67 +331,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="position-sticky" style="top: 2rem;">
-                            
-
-                            <div class="p-2">
-                                <h5 class="fst-italic">Tips</h5>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a 
-                                            class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" 
-                                            href="../BX293APEN/github.html"
-                                        >
-                                            <img 
-                                                class="bd-placeholder-img" 
-                                                width="100%" height="96" 
-                                                src="https://skillicons.dev/icons?i=github" 
-                                                aria-hidden="true" 
-                                                preserveAspectRatio="xMidYMid slice" 
-                                                focusable="false"
-                                            />
-                                            <div class="col-lg-8">
-                                                <h6 class="mb-0">GitHub</h6>
-                                                <small class="text-body-secondary">Summary: How to use GitHub</small>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a 
-                                            class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" 
-                                            href="../BX293APEN/vim.html"
-                                        >
-                                            <img 
-                                                class="bd-placeholder-img" 
-                                                width="100%" height="96" 
-                                                src="https://skillicons.dev/icons?i=vim" 
-                                                aria-hidden="true" 
-                                                preserveAspectRatio="xMidYMid slice" 
-                                                focusable="false"
-                                            />
-                                            <div class="col-lg-8">
-                                                <h6 class="mb-0">Vim</h6>
-                                                <small class="text-body-secondary">
-                                                    Want to learn Vim?<br> 
-                                                    This guide will help you understand.
-                                                </small>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <!--
-                            <div class="p-4">
-                                <h5 class="fst-italic">Archives</h5>
-                                <ol class="list-unstyled mb-0">
-                                  <li>
-                                      <a href="#">April 2025</a>
-                                  </li>
-                                </ol>
-                            </div>
-                            -->
-                        
+                            <div id="tips"></div>
                         </div>
                     </div>
                 </div>
@@ -443,8 +350,11 @@
         </p>
         <script src="../view/bootstrap.bundle.min.js"></script>
         <script src="../view/search.js"></script>
+        <script src="../view/embeddedHTML.js"></script>
         <script>
             new Search(model.bookmarkData);
+            embedded_html("../template/header.html", "header-title");
+            embedded_html("../template/tips.html", "tips");
         </script>
     </footer>
 </html>
