@@ -26,7 +26,40 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <div id="header-title"></div>
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="../index.html">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../html/welcome.html">
+                                    Works
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://github.com/BX293APEN">
+                                    <img src = "../img/GitHub.png" height= "40px" width="40px">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://discord.gg/hszD9jqpq2">
+                                    <img src = "../img/game.ico" height= "40px" width="40px">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://bsky.app/profile/bx293apen.bsky.social">
+                                    <img src = "../img/BlueSky.png" height= "40px" width="40px">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://x.com/BX293A_PEN">
+                                    <img src = "../img/X.png" height= "40px" width="40px">
+                                </a>
+                            </li>
+                        </ul>
                         <span class="ms-3 d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchbox">
                         </span>
@@ -353,7 +386,6 @@
         <script src="../view/embeddedHTML.js"></script>
         <script>
             new Search(model.bookmarkData);
-            embedded_html("../template/header.html", "header-title");
             embedded_html("../template/tips.html", "tips");
         </script>
     </footer>
