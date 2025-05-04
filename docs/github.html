@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ja" data-bs-theme="auto">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="google-site-verification" content="OC87FYYbTNU7c3Q1vn3qee5kXLtXMjotpx0iGK1ZPUU" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">-->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/index/index.css" rel="stylesheet">
+        <link href="../css/welcome/welcome.css" rel="stylesheet">
+        <link href="../css/carousel.css" rel="stylesheet">
+        <link href="../css/blog.css" rel="stylesheet">
+        <link rel="icon" href="../img/PEN.ico">
+        <script src="../model/index/index.js"></script>
+
+        <title>BX293A_PEN</title>
+    </head>
+    <body>
+        <header data-bs-theme="dark">
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="https://github.com/BX293APEN">
+                        <img src = "../img/PEN.png" height= "40px" width="40px">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="../index.html">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../html/welcome.html">
+                                    Works
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://github.com/BX293APEN">
+                                    <img src = "../img/GitHub.png" height= "40px" width="40px">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://discord.gg/hszD9jqpq2">
+                                    <img src = "../img/game.ico" height= "40px" width="40px">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://bsky.app/profile/bx293apen.bsky.social">
+                                    <img src = "../img/BlueSky.png" height= "40px" width="40px">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://x.com/BX293A_PEN">
+                                    <img src = "../img/X.png" height= "40px" width="40px">
+                                </a>
+                            </li>
+                        </ul>
+                        <span class="ms-3 d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchbox">
+                        </span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container pt-3">
+            <main>
+                <div class="row g-5">
+                    <div class="col-md-8">
+                        <h3 class="pt-4 mt-4 border-bottom fw-bold">
+                            GitHub Tips
+                        </h3>
+                    
+                        <article class="blog-post">
+
+                            <h4 class="mt-5 mb-3"> 用語 </h4>
+                            <p>
+                                <table class="table table-striped-columns table-bordered">
+                                    <tr>
+                                        <th>用語</th>
+                                        <th>説明</th>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Git</b></td>
+                                        <td>分散型バージョン管理システム</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>GitHub</b></td>
+                                        <td>Git を利用したWebアプリケーション</td>
+                                    </tr>
+                                </table>
+                            </p>
+
+                            <h4 class="mt-5 mb-3"> gitコマンドの使い方 </h4>
+                            <a href ="https://gitforwindows.org/"> 
+                                <img src="https://skillicons.dev/icons?i=git"/>
+                            </a>
+
+                            <a href ="https://gitforwindows.org/"> 
+                                <b>Install</b>
+                            </a>
+
+                            <h5 class="mt-5 mb-3"> 設定 </h5>
+                            <h6 class="mt-5 mb-3"> ユーザ登録 </h6>
+                            <pre><code>
+                                git config --global user.name [名前]
+                                git config --global user.email [メールアドレス]
+                            </code></pre>
+
+                            <h7 class="mt-5 mb-3"> 確認 </h7>
+
+                            <dl>
+                                <dt>
+                                    Windows 
+                                </dt>
+                                <dd>
+                                    <pre><code>
+                                        git config --list | findstr "user.name"
+                                        git config --list | findstr "user.email"
+                                    </code></pre>
+                                </dd>
+                                <dt>
+                                    Linux
+                                </dt>
+                                <dd>
+                                    <pre><code>
+                                        git config --list | grep "user.name"
+                                        git config --list | grep "user.email"
+                                    </code></pre>
+                                </dd>
+                            </dl>
+
+                            <h6 class="mt-5 mb-3"> Alias設定 </h6>
+                            <pre><code>
+                            git config --global alias.[新たに設定したいコマンド名] [gitコマンド]
+                            </code></pre>
+                            <br>
+                            <pre><code>git [新たに設定したいコマンド名]</code></pre>を打つと<pre><code>git [gitコマンド]</code></pre>が実行される
+
+                            <h6 class="mt-5 mb-3"> ローカルリポジトリの状態を確認する </h6>
+                            <pre><code>
+                                git status
+                            </code></pre>
+                            
+                            <h6 class="mt-5 mb-3"> ログの確認 </h6>
+                            <pre><code>
+                                git log
+                                git log - [確認したいログの数]
+                            </code></pre>
+
+                            <h5 class="mt-5 mb-3"> リポジトリ操作 </h5>
+                            <h6 class="mt-5 mb-3"> リポジトリの設定 </h6>
+                            <h7 class="mt-5 mb-3"> ローカルリポジトリの作成 </h7>
+                            <pre><code>
+                                git init
+                            </code></pre>
+                            <ul>
+                                <li>
+                                    .gitという隠しフォルダが生成される(このディレクトリ内での作業が可能になる)
+                                </li>
+                            </ul>
+
+                            <h7 class="mt-5 mb-3"> リモートリポジトリの指定 </h7>
+                            <pre><code>
+                                git remote add origin [リポジトリのURL]
+                            </code></pre>
+
+                            <h7 class="mt-5 mb-3"> メインブランチを指定 </h7>
+                            <pre><code>
+                                git branch -M main
+                            </code></pre>
+
+                            <h6 class="mt-5 mb-3"> アップロード </h6>
+
+                            <img src="./img/upload.gif" width = "70%">
+
+                            <h7 class="mt-5 mb-3"> アップロードするファイルを指定 </h7>
+
+                            <pre><code>
+                                git add [ファイル名, ディレクトリ名, -A:全て]
+                            </code></pre>
+
+                            <h7 class="mt-5 mb-3"> ローカルリポジトリにコミット </h7>
+                            <pre><code>
+                                git commit -m "コメント"
+                            </code></pre>
+
+                            <h7 class="mt-5 mb-3"> リモートリポジトリにプッシュ </h7>
+                            <pre><code>
+                                git push -u origin main  // 初回のみ (競合解決)
+                                git push
+                                git push -f //強制push
+                            </code></pre>
+                            <ul>
+                                <li>
+                                    <code>-u</code> : --set-upstream
+                                </li>
+                                <li>
+                                    ローカルブランチの上流が [ブランチ名] へ移る
+                                </li>
+                            </ul>
+                            <h6 class="mt-5 mb-3"> ダウンロード </h6>
+                            <img src="./img/download.gif" width = "70%">
+
+                            <h7 class="mt-5 mb-3"> clone </h7>
+                            <ul>
+                                <li>
+                                    リモートリポジトリ上の全てのファイルがダウンロードされる
+                                </li>
+                            </ul>
+                            <pre><code>
+                                git clone <リポジトリのURL>
+                            </code></pre>
+
+                            <h7 class="mt-5 mb-3"> pull </h7>
+                            <ul>
+                                <li>
+                                    更新されているリモートリポジトリのファイルをローカルリポジトリにダウンロード
+                                </li>
+                            </ul>
+                            <pre><code>
+                                git pull origin [ブランチ名] // 初回のみ
+                                git pull
+                            </code></pre>
+
+                            <h6 class="mt-5 mb-3"> ファイル復元 </h6>
+                            <pre><code>
+                                git restore [ファイル名, ディレクトリ名]
+                            </code></pre>
+                            <h6 class="mt-5 mb-3"> ステージングエリアに保管されているファイルの取り消し </h6>
+                            <pre><code>
+                                git restore --staged [取り消したいファイル・フォルダ名]
+                            </code></pre>
+
+                            <h6 class="mt-5 mb-3"> プッシュを取り消す </h6>
+                            <pre><code>
+                            git reset --hard [取り消すプッシュの直前のコミットハッシュ値] 
+                            </code></pre>
+                            <code>[取り消すプッシュの直前のコミットハッシュ値]</code> : <code>git log</code>で確認
+
+                            <h5 class="mt-5 mb-3"> ブランチ操作 </h5>
+                            <h6 class="mt-5 mb-3"> ブランチ確認 </h6>
+                            <pre><code>
+                                git branch -a
+                            </code></pre>
+
+                            <h6 class="mt-5 mb-3"> ブランチ作成・移動 </h6>
+                            <pre><code>
+                                git switch -c [新しいブランチ名, 移動先ブランチ名]
+                            </code></pre>
+
+                            <h6 class="mt-5 mb-3"> ブランチの移動 </h6>
+                            <pre><code>
+                                git switch [切り替え先のブランチ名]
+                            </code></pre>
+
+                            <h6 class="mt-5 mb-3"> ブランチ合成 </h6>
+                            <pre><code>
+                                git merge [併合したいブランチ]
+                                git merge --allow-unrelated-histories //履歴の異なるブランチを合成することを許可する
+                            </code></pre>
+                            → 自ブランチに<code>[併合したいブランチ]</code>が合成される
+
+                            <h6 class="mt-5 mb-3"> ブランチ名変更 </h6>
+                            <pre><code>
+                            git branch -m [元のブランチ名] [変更したブランチ名]
+                            </code></pre>
+
+                            <h5 class="mt-5 mb-3"> ブランチのマージ </h5>
+
+                            <dl>
+                                <dt>
+                                    1. 併合先のブランチへ移動
+                                </dt>
+                                <dd>
+                                    <pre><code>
+                                        git switch [併合先ブランチ]
+                                    </code></pre>
+                                </dd>
+                                <dt>
+                                    2. ブランチを併合
+                                </dt>
+                                <dd>
+                                    <pre><code>
+                                        git merge --allow-unrelated-histories [併合元のブランチ]
+                                    </code></pre>
+                                </dd>
+                                <dt>
+                                    3. 混乱しないように、併合元のブランチを削除(推奨)
+                                </dt>
+                                <dd></dd>
+                            </dl>
+                            <h6 class="mt-5 mb-3"> ローカルブランチ削除 </h6>
+                            <pre><code>
+                                git branch -d [削除したいブランチ] // 変更をマージした後実行可能
+                                git branch -D [過去の変更まで完全削除したいブランチ]
+                            </code></pre>
+
+                            <h6 class="mt-5 mb-3"> リモートリポジトリのブランチを削除 </h6>
+                            <pre><code>
+                                git push origin --delete [削除したいブランチ名]
+                            </code></pre>
+
+                            <h6 class="mt-5 mb-3"> マージの取り消し </h6>
+                            <pre><code>
+                                git merge --abort
+                            </code></pre>
+
+                            <h5 class="mt-5 mb-3"> Gitの更新 </h5>
+                            <dl>
+                                <dt>
+                                    Windows 
+                                </dt>
+                                <dd>
+                                    <pre><code>
+                                        git update-git-for-windows
+                                    </code></pre>
+                                </dd>
+                            </dl>
+                            
+                            <h4 class="mt-5 mb-3"> Reference </h4>
+                            <blockquote cite="https://qiita.com/T-H9703EnAc/items/4fbe6593d42f9a844b1c">
+                                <a href="https://qiita.com/T-H9703EnAc/items/4fbe6593d42f9a844b1c">
+                                    Git インストール方法
+                                </a>
+                            </blockquote>
+                            <blockquote cite="https://qiita.com/ayatokura/items/9eabb7ae20752e6dc79d">
+                                <a href="https://qiita.com/ayatokura/items/9eabb7ae20752e6dc79d">
+                                    GitHub アカウント作成方法
+                                </a>
+                            </blockquote>
+
+                        </article>
+                    
+                    </div>
+                    <div class="col-md-4">
+                        <div class="position-sticky" style="top: 2rem;">
+                            
+
+                            <div class="p-2">
+                                <h5 class="fst-italic">Tips</h5>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a 
+                                            class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" 
+                                            href="../BX293APEN/github.html"
+                                        >
+                                            <img 
+                                                class="bd-placeholder-img" 
+                                                width="100%" height="96" 
+                                                src="https://skillicons.dev/icons?i=github" 
+                                                aria-hidden="true" 
+                                                preserveAspectRatio="xMidYMid slice" 
+                                                focusable="false"
+                                            />
+                                            <div class="col-lg-8">
+                                                <h6 class="mb-0">GitHub</h6>
+                                                <small class="text-body-secondary">Summary: How to use GitHub</small>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a 
+                                            class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" 
+                                            href="../BX293APEN/vim.html"
+                                        >
+                                            <img 
+                                                class="bd-placeholder-img" 
+                                                width="100%" height="96" 
+                                                src="https://skillicons.dev/icons?i=vim" 
+                                                aria-hidden="true" 
+                                                preserveAspectRatio="xMidYMid slice" 
+                                                focusable="false"
+                                            />
+                                            <div class="col-lg-8">
+                                                <h6 class="mb-0">Vim</h6>
+                                                <small class="text-body-secondary">
+                                                    Want to learn Vim?<br> 
+                                                    This guide will help you understand.
+                                                </small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!--
+                            <div class="p-4">
+                                <h5 class="fst-italic">Archives</h5>
+                                <ol class="list-unstyled mb-0">
+                                  <li>
+                                      <a href="#">April 2025</a>
+                                  </li>
+                                </ol>
+                            </div>
+                            -->
+                        
+                        </div>
+                    </div>
+                </div>
+            
+            </main>
+        </div>
+    </body>
+    <footer class="container border-top"> <!-- FOOTER -->
+        <p class="float-end">
+            &copy; 
+            PEN
+            &middot; 
+            <a href="https://github.com/BX293APEN/BX293APEN.github.io?tab=Apache-2.0-1-ov-file">
+                LICENCE
+            </a>
+        </p>
+        <script src="../view/bootstrap.bundle.min.js"></script>
+        <script src="../view/search.js"></script>
+        <script>
+            new Search(model.bookmarkData);
+        </script>
+    </footer>
+</html>
