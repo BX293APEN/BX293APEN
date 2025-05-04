@@ -3,14 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="google-site-verification" content="OC87FYYbTNU7c3Q1vn3qee5kXLtXMjotpx0iGK1ZPUU" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">-->
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/index/index.css" rel="stylesheet">
-        <link href="../css/welcome/welcome.css" rel="stylesheet">
-        <link href="../css/carousel.css" rel="stylesheet">
-        <link href="../css/blog.css" rel="stylesheet">
-        <link rel="icon" href="../img/PEN.ico">
+        <div id="styleList"></div>
         <script src="../model/index/index.js"></script>
 
         <title>GitHub Tips</title>
@@ -361,7 +354,8 @@ git update-git-for-windows
         <script src="../view/embeddedHTML.js"></script>
         <script>
             new Search(model.bookmarkData);
-            embedded_html("../template/tips.html", "tips")
+            embedded_html("../template/tips.html", "tips");
+            embedded_html("../template/styleConfig.html", "styleList");
         </script>
     </footer>
 </html>
