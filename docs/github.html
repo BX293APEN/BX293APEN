@@ -99,7 +99,7 @@
 
                             <h5 class="mt-5 mb-3"> 設定 </h5>
                             <h6 class="mt-5 mb-3"> ユーザ登録 </h6>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git config --global user.name [名前]
 git config --global user.email [メールアドレス]
                             </code></pre>
@@ -111,7 +111,7 @@ git config --global user.email [メールアドレス]
                                     Windows 
                                 </dt>
                                 <dd>
-                                    <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                                    <pre><code class="language-bash bg-body-tertiary">
 git config --list | findstr "user.name"
 git config --list | findstr "user.email"
                                     </code></pre>
@@ -120,7 +120,7 @@ git config --list | findstr "user.email"
                                     Linux
                                 </dt>
                                 <dd>
-                                    <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                                    <pre><code class="language-bash bg-body-tertiary">
 git config --list | grep "user.name"
 git config --list | grep "user.email"
                                     </code></pre>
@@ -128,19 +128,19 @@ git config --list | grep "user.email"
                             </dl>
 
                             <h6 class="mt-5 mb-3"> Alias設定 </h6>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git config --global alias.[新たに設定したいコマンド名] [gitコマンド]
                             </code></pre>
                             <br>
-                            <code class="bg-body-tertiary">git [新たに設定したいコマンド名]</code>を打つと<code class="bg-body-tertiary">git [gitコマンド]</code>が実行される
+                            <code class="language-bash bg-body-tertiary">git [新たに設定したいコマンド名]</code>を打つと<code class="language-bash bg-body-tertiary">git [gitコマンド]</code>が実行される
 
                             <h6 class="mt-5 mb-3"> ローカルリポジトリの状態を確認する </h6>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git status
                             </code></pre>
                             
                             <h6 class="mt-5 mb-3"> ログの確認 </h6>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git log
 git log - [確認したいログの数]
                             </code></pre>
@@ -148,7 +148,7 @@ git log - [確認したいログの数]
                             <h5 class="mt-5 mb-3"> リポジトリ操作 </h5>
                             <h6 class="mt-5 mb-3"> リポジトリの設定 </h6>
                             <h7 class="mt-5 mb-3"> ローカルリポジトリの作成 </h7>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git init
                             </code></pre>
                             <ul>
@@ -158,12 +158,12 @@ git init
                             </ul>
 
                             <h7 class="mt-5 mb-3"> リモートリポジトリの指定 </h7>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git remote add origin [リポジトリのURL]
                             </code></pre>
 
                             <h7 class="mt-5 mb-3"> メインブランチを指定 </h7>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git branch -M main
                             </code></pre>
 
@@ -173,24 +173,24 @@ git branch -M main
 
                             <h7 class="mt-5 mb-3"> アップロードするファイルを指定 </h7>
 
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git add [ファイル名, ディレクトリ名, -A:全て]
                             </code></pre>
 
                             <h7 class="mt-5 mb-3"> ローカルリポジトリにコミット </h7>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git commit -m "コメント"
                             </code></pre>
 
                             <h7 class="mt-5 mb-3"> リモートリポジトリにプッシュ </h7>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git push -u origin main  // 初回のみ (競合解決)
 git push
 git push -f //強制push
                             </code></pre>
                             <ul>
                                 <li>
-                                    <code class="bg-body-tertiary">-u</code> : --set-upstream
+                                    <code class="language-bash bg-body-tertiary">-u</code> : --set-upstream
                                 </li>
                                 <li>
                                     ローカルブランチの上流が [ブランチ名] へ移る
@@ -205,7 +205,7 @@ git push -f //強制push
                                     リモートリポジトリ上の全てのファイルがダウンロードされる
                                 </li>
                             </ul>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git clone <リポジトリのURL>
                             </code></pre>
 
@@ -215,51 +215,51 @@ git clone <リポジトリのURL>
                                     更新されているリモートリポジトリのファイルをローカルリポジトリにダウンロード
                                 </li>
                             </ul>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git pull origin [ブランチ名] // 初回のみ
 git pull
                             </code></pre>
 
                             <h6 class="mt-5 mb-3"> ファイル復元 </h6>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git restore [ファイル名, ディレクトリ名]
                             </code></pre>
                             <h6 class="mt-5 mb-3"> ステージングエリアに保管されているファイルの取り消し </h6>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git restore --staged [取り消したいファイル・フォルダ名]
                             </code></pre>
 
                             <h6 class="mt-5 mb-3"> プッシュを取り消す </h6>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git reset --hard [取り消すプッシュの直前のコミットハッシュ値] 
                             </code></pre>
-                            <code class="bg-body-tertiary">[取り消すプッシュの直前のコミットハッシュ値]</code> : <code class="bg-body-tertiary">git log</code>で確認
+                            <code class="language-bash bg-body-tertiary">[取り消すプッシュの直前のコミットハッシュ値]</code> : <code class="language-bash bg-body-tertiary">git log</code>で確認
 
                             <h5 class="mt-5 mb-3"> ブランチ操作 </h5>
                             <h6 class="mt-5 mb-3"> ブランチ確認 </h6>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git branch -a
                             </code></pre>
 
                             <h6 class="mt-5 mb-3"> ブランチ作成・移動 </h6>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git switch -c [新しいブランチ名, 移動先ブランチ名]
                             </code></pre>
 
                             <h6 class="mt-5 mb-3"> ブランチの移動 </h6>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git switch [切り替え先のブランチ名]
                             </code></pre>
 
                             <h6 class="mt-5 mb-3"> ブランチ合成 </h6>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git merge [併合したいブランチ]
 git merge --allow-unrelated-histories //履歴の異なるブランチを合成することを許可する
                             </code></pre>
-                            → 自ブランチに<code class="bg-body-tertiary">[併合したいブランチ]</code>が合成される
+                            → 自ブランチに<code class="language-bash bg-body-tertiary">[併合したいブランチ]</code>が合成される
 
                             <h6 class="mt-5 mb-3"> ブランチ名変更 </h6>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git branch -m [元のブランチ名] [変更したブランチ名]
                             </code></pre>
 
@@ -270,7 +270,7 @@ git branch -m [元のブランチ名] [変更したブランチ名]
                                     1. 併合先のブランチへ移動
                                 </dt>
                                 <dd>
-                                    <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                                    <pre><code class="language-bash bg-body-tertiary">
 git switch [併合先ブランチ]
                                     </code></pre>
                                 </dd>
@@ -278,7 +278,7 @@ git switch [併合先ブランチ]
                                     2. ブランチを併合
                                 </dt>
                                 <dd>
-                                    <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                                    <pre><code class="language-bash bg-body-tertiary">
 git merge --allow-unrelated-histories [併合元のブランチ]
                                     </code></pre>
                                 </dd>
@@ -288,18 +288,18 @@ git merge --allow-unrelated-histories [併合元のブランチ]
                                 <dd></dd>
                             </dl>
                             <h6 class="mt-5 mb-3"> ローカルブランチ削除 </h6>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git branch -d [削除したいブランチ] // 変更をマージした後実行可能
 git branch -D [過去の変更まで完全削除したいブランチ]
                             </code></pre>
 
                             <h6 class="mt-5 mb-3"> リモートリポジトリのブランチを削除 </h6>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git push origin --delete [削除したいブランチ名]
                             </code></pre>
 
                             <h6 class="mt-5 mb-3"> マージの取り消し </h6>
-                            <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                            <pre><code class="language-bash bg-body-tertiary">
 git merge --abort
                             </code></pre>
 
@@ -309,7 +309,7 @@ git merge --abort
                                     Windows 
                                 </dt>
                                 <dd>
-                                    <pre class="bg-body-tertiary"><code class="bg-body-tertiary">
+                                    <pre><code class="language-bash bg-body-tertiary">
 git update-git-for-windows
                                     </code></pre>
                                 </dd>
@@ -352,10 +352,12 @@ git update-git-for-windows
         <script src="../view/bootstrap.bundle.min.js"></script>
         <script src="../view/search.js"></script>
         <script src="../view/embeddedHTML.js"></script>
+        <script src="../view/highlight.min.js"></script>
         <script>
             new Search(model.bookmarkData);
             embedded_html("../template/tips.html", "tips");
             embedded_html("../template/styleConfig.html", "styleList");
+            hljs.highlightAll();
         </script>
     </footer>
 </html>
