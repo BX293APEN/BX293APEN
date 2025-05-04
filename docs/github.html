@@ -10,7 +10,6 @@
         <link href="../css/welcome/welcome.css" rel="stylesheet">
         <link href="../css/carousel.css" rel="stylesheet">
         <link href="../css/blog.css" rel="stylesheet">
-        <link href="../css/tips/style.css" rel="stylesheet">
         <link rel="icon" href="../img/PEN.ico">
         <script src="../model/index/index.js"></script>
 
@@ -107,10 +106,10 @@
 
                             <h5 class="mt-5 mb-3"> 設定 </h5>
                             <h6 class="mt-5 mb-3"> ユーザ登録 </h6>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git config --global user.name [名前]
 git config --global user.email [メールアドレス]
-                            </code></pre>
+                            </code></pre><div>
 
                             <h7 class="mt-5 mb-3"> 確認 </h7>
 
@@ -119,46 +118,46 @@ git config --global user.email [メールアドレス]
                                     Windows 
                                 </dt>
                                 <dd>
-                                    <pre><code class=".bg-gray">
+                                    <div class=".bg-body-secondary"><pre><code>
 git config --list | findstr "user.name"
 git config --list | findstr "user.email"
-                                    </code></pre>
+                                    </code></pre><div>
                                 </dd>
                                 <dt>
                                     Linux
                                 </dt>
                                 <dd>
-                                    <pre><code class=".bg-gray">
+                                    <div class=".bg-body-secondary"><pre><code>
 git config --list | grep "user.name"
 git config --list | grep "user.email"
-                                    </code></pre>
+                                    </code></pre><div>
                                 </dd>
                             </dl>
 
                             <h6 class="mt-5 mb-3"> Alias設定 </h6>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git config --global alias.[新たに設定したいコマンド名] [gitコマンド]
-                            </code></pre>
+                            </code></pre><div>
                             <br>
-                            <code class=".bg-gray">git [新たに設定したいコマンド名]</code>を打つと<code class=".bg-gray">git [gitコマンド]</code>が実行される
+                            <code>git [新たに設定したいコマンド名]</code>を打つと<code>git [gitコマンド]</code>が実行される
 
                             <h6 class="mt-5 mb-3"> ローカルリポジトリの状態を確認する </h6>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git status
-                            </code></pre>
+                            </code></pre><div>
                             
                             <h6 class="mt-5 mb-3"> ログの確認 </h6>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git log
 git log - [確認したいログの数]
-                            </code></pre>
+                            </code></pre><div>
 
                             <h5 class="mt-5 mb-3"> リポジトリ操作 </h5>
                             <h6 class="mt-5 mb-3"> リポジトリの設定 </h6>
                             <h7 class="mt-5 mb-3"> ローカルリポジトリの作成 </h7>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git init
-                            </code></pre>
+                            </code></pre><div>
                             <ul>
                                 <li>
                                     .gitという隠しフォルダが生成される(このディレクトリ内での作業が可能になる)
@@ -166,14 +165,14 @@ git init
                             </ul>
 
                             <h7 class="mt-5 mb-3"> リモートリポジトリの指定 </h7>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git remote add origin [リポジトリのURL]
-                            </code></pre>
+                            </code></pre><div>
 
                             <h7 class="mt-5 mb-3"> メインブランチを指定 </h7>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git branch -M main
-                            </code></pre>
+                            </code></pre><div>
 
                             <h6 class="mt-5 mb-3"> アップロード </h6>
 
@@ -181,24 +180,24 @@ git branch -M main
 
                             <h7 class="mt-5 mb-3"> アップロードするファイルを指定 </h7>
 
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git add [ファイル名, ディレクトリ名, -A:全て]
-                            </code></pre>
+                            </code></pre><div>
 
                             <h7 class="mt-5 mb-3"> ローカルリポジトリにコミット </h7>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git commit -m "コメント"
-                            </code></pre>
+                            </code></pre><div>
 
                             <h7 class="mt-5 mb-3"> リモートリポジトリにプッシュ </h7>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git push -u origin main  // 初回のみ (競合解決)
 git push
 git push -f //強制push
-                            </code></pre>
+                            </code></pre><div>
                             <ul>
                                 <li>
-                                    <code class=".bg-gray">-u</code> : --set-upstream
+                                    <code>-u</code> : --set-upstream
                                 </li>
                                 <li>
                                     ローカルブランチの上流が [ブランチ名] へ移る
@@ -213,9 +212,9 @@ git push -f //強制push
                                     リモートリポジトリ上の全てのファイルがダウンロードされる
                                 </li>
                             </ul>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git clone <リポジトリのURL>
-                            </code></pre>
+                            </code></pre><div>
 
                             <h7 class="mt-5 mb-3"> pull </h7>
                             <ul>
@@ -223,53 +222,53 @@ git clone <リポジトリのURL>
                                     更新されているリモートリポジトリのファイルをローカルリポジトリにダウンロード
                                 </li>
                             </ul>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git pull origin [ブランチ名] // 初回のみ
 git pull
-                            </code></pre>
+                            </code></pre><div>
 
                             <h6 class="mt-5 mb-3"> ファイル復元 </h6>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git restore [ファイル名, ディレクトリ名]
-                            </code></pre>
+                            </code></pre><div>
                             <h6 class="mt-5 mb-3"> ステージングエリアに保管されているファイルの取り消し </h6>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git restore --staged [取り消したいファイル・フォルダ名]
-                            </code></pre>
+                            </code></pre><div>
 
                             <h6 class="mt-5 mb-3"> プッシュを取り消す </h6>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git reset --hard [取り消すプッシュの直前のコミットハッシュ値] 
-                            </code></pre>
-                            <code class=".bg-gray">[取り消すプッシュの直前のコミットハッシュ値]</code> : <code class=".bg-gray">git log</code>で確認
+                            </code></pre><div>
+                            <code>[取り消すプッシュの直前のコミットハッシュ値]</code> : <code>git log</code>で確認
 
                             <h5 class="mt-5 mb-3"> ブランチ操作 </h5>
                             <h6 class="mt-5 mb-3"> ブランチ確認 </h6>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git branch -a
-                            </code></pre>
+                            </code></pre><div>
 
                             <h6 class="mt-5 mb-3"> ブランチ作成・移動 </h6>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git switch -c [新しいブランチ名, 移動先ブランチ名]
-                            </code></pre>
+                            </code></pre><div>
 
                             <h6 class="mt-5 mb-3"> ブランチの移動 </h6>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git switch [切り替え先のブランチ名]
-                            </code></pre>
+                            </code></pre><div>
 
                             <h6 class="mt-5 mb-3"> ブランチ合成 </h6>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git merge [併合したいブランチ]
 git merge --allow-unrelated-histories //履歴の異なるブランチを合成することを許可する
-                            </code></pre>
-                            → 自ブランチに<code class=".bg-gray">[併合したいブランチ]</code>が合成される
+                            </code></pre><div>
+                            → 自ブランチに<code>[併合したいブランチ]</code>が合成される
 
                             <h6 class="mt-5 mb-3"> ブランチ名変更 </h6>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git branch -m [元のブランチ名] [変更したブランチ名]
-                            </code></pre>
+                            </code></pre><div>
 
                             <h5 class="mt-5 mb-3"> ブランチのマージ </h5>
 
@@ -278,17 +277,17 @@ git branch -m [元のブランチ名] [変更したブランチ名]
                                     1. 併合先のブランチへ移動
                                 </dt>
                                 <dd>
-                                    <pre><code class=".bg-gray">
+                                    <div class=".bg-body-secondary"><pre><code>
 git switch [併合先ブランチ]
-                                    </code></pre>
+                                    </code></pre><div>
                                 </dd>
                                 <dt>
                                     2. ブランチを併合
                                 </dt>
                                 <dd>
-                                    <pre><code class=".bg-gray">
+                                    <div class=".bg-body-secondary"><pre><code>
 git merge --allow-unrelated-histories [併合元のブランチ]
-                                    </code></pre>
+                                    </code></pre><div>
                                 </dd>
                                 <dt>
                                     3. 混乱しないように、併合元のブランチを削除(推奨)
@@ -296,20 +295,20 @@ git merge --allow-unrelated-histories [併合元のブランチ]
                                 <dd></dd>
                             </dl>
                             <h6 class="mt-5 mb-3"> ローカルブランチ削除 </h6>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git branch -d [削除したいブランチ] // 変更をマージした後実行可能
 git branch -D [過去の変更まで完全削除したいブランチ]
-                            </code></pre>
+                            </code></pre><div>
 
                             <h6 class="mt-5 mb-3"> リモートリポジトリのブランチを削除 </h6>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git push origin --delete [削除したいブランチ名]
-                            </code></pre>
+                            </code></pre><div>
 
                             <h6 class="mt-5 mb-3"> マージの取り消し </h6>
-                            <pre><code class=".bg-gray">
+                            <div class=".bg-body-secondary"><pre><code>
 git merge --abort
-                            </code></pre>
+                            </code></pre><div>
 
                             <h5 class="mt-5 mb-3"> Gitの更新 </h5>
                             <dl>
@@ -317,9 +316,9 @@ git merge --abort
                                     Windows 
                                 </dt>
                                 <dd>
-                                    <pre><code class=".bg-gray">
+                                    <div class=".bg-body-secondary"><pre><code>
 git update-git-for-windows
-                                    </code></pre>
+                                    </code></pre><div>
                                 </dd>
                             </dl>
                             
