@@ -325,22 +325,14 @@
         <script src="../view/search.js"></script>
         <script src="../view/embeddedHTML.js"></script>
         <script src="../view/highlight.min.js"></script>
+        <script src="../view/activenav.js"></script>
         <script>
             hljs.highlightAll();
             embedded_html("../template/tips.html", "tips");
             embedded_html("../template/styleConfig.html", "styleList");
             embedded_html("../template/header.html", "header-contents");
             embedded_html("../template/footer.html", "footer-contents");
-            window.onload = function () {
-                setTimeout(
-                    function() {
-                        let activeNav = document.getElementById('works');
-                        activeNav.classList.add('active');
-                        new Search(model.bookmarkData);
-                    }, 
-                    100
-                );
-            }
+            window.onload = active_nav("works");
         </script>
     </footer>
 </html>
