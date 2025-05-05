@@ -14,57 +14,7 @@
         <title>Vim Tips</title>
     </head>
     <body>
-        <header data-bs-theme="dark">
-            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="https://github.com/BX293APEN">
-                        <img src = "../img/PEN.png" height= "40px" width="40px">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="../index.html">
-                                    Home
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="../html/welcome.html">
-                                    Works
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav mb-2 mb-md-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://github.com/BX293APEN">
-                                    <img src = "../img/GitHub.png" height= "40px" width="40px">
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://discord.gg/hszD9jqpq2">
-                                    <img src = "../img/game.ico" height= "40px" width="40px">
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://bsky.app/profile/bx293apen.bsky.social">
-                                    <img src = "../img/BlueSky.png" height= "40px" width="40px">
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://x.com/BX293A_PEN">
-                                    <img src = "../img/X.png" height= "40px" width="40px">
-                                </a>
-                            </li>
-                        </ul>
-                        <span class="ms-3 d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchbox">
-                        </span>
-                    </div>
-                </div>
-            </nav>
-        </header>
+        <div id="header-contents"></div>
         <div class="container pt-3">
             <main>
                 <div class="row g-5">
@@ -370,24 +320,21 @@
             </main>
         </div>
     </body>
-    <footer class="container border-top"> <!-- FOOTER -->
-        <p class="float-end">
-            &copy; 
-            PEN
-            &middot; 
-            <a href="https://github.com/BX293APEN/BX293APEN.github.io?tab=Apache-2.0-1-ov-file">
-                LICENCE
-            </a>
-        </p>
+    <footer class="container border-top" id="footer-contents"> <!-- FOOTER -->
         <script src="../view/bootstrap.bundle.min.js"></script>
         <script src="../view/search.js"></script>
         <script src="../view/embeddedHTML.js"></script>
         <script src="../view/highlight.min.js"></script>
         <script>
             new Search(model.bookmarkData);
+            hljs.highlightAll();
             embedded_html("../template/tips.html", "tips");
             embedded_html("../template/styleConfig.html", "styleList");
-            hljs.highlightAll();
+            embedded_html("../template/header.html", "header-contents");
+            embedded_html("../template/footer.html", "footer-contents");
+            window.onload = function () {
+                new Search(model.bookmarkData);
+            }
         </script>
     </footer>
 </html>
