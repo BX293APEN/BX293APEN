@@ -254,9 +254,9 @@ git branch -D [過去の変更まで完全削除したいブランチ]</code></p
             embedded_html("../template/header.html", "header-contents");
             embedded_html("../template/footer.html", "footer-contents");
             window.onload = function () {
-                new Search(model.bookmarkData);
                 let activeNav = document.getElementById('works');
                 activeNav.classList.add('active');
+                new Search(model.bookmarkData);
             }
         </script>
     </footer>
