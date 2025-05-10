@@ -248,6 +248,7 @@ git branch -D [過去の変更まで完全削除したいブランチ]</code></p
         <script src="../view/embeddedHTML.js"></script>
         <script src="../view/highlight.min.js"></script>
         <script src="../view/activenav.js"></script>
+        <script src="../view/disp.js"></script>
         <script>
             hljs.highlightAll();
             embedded_html("../template/tips.html", "tips");
@@ -255,6 +256,7 @@ git branch -D [過去の変更まで完全削除したいブランチ]</code></p
             embedded_html("../template/header.html", "header-contents");
             embedded_html("../template/footer.html", "footer-contents");
             window.addEventListener("load", active_nav("tipsIndex"));
+            window.addEventListener("load", element_disp([],["visualstudioTip", "rn4020Tip"]));
         </script>
     </footer>
 </html>
