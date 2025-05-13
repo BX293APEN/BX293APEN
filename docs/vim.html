@@ -334,7 +334,14 @@
             embedded_html("/template/header.html", "header-contents");
             embedded_html("/template/footer.html", "footer-contents");
             window.addEventListener("load", active_nav("tipsIndex"));
-            window.addEventListener("load", element_disp(["githubTip", "rn4020Tip", "linuxTip", "pythonTip"],[]));
+            window.addEventListener(
+                "load", 
+                element_disp(
+                    {
+                        "dispIDList" : ["githubTip", "rn4020Tip", "linuxTip", "pythonTip"]
+                    }
+                )
+            );
         </script>
     </footer>
 </html>
