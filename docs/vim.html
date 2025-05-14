@@ -5,6 +5,8 @@
         <meta name="google-site-verification" content="OC87FYYbTNU7c3Q1vn3qee5kXLtXMjotpx0iGK1ZPUU" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="/model/index/index.js"></script>
+        <script src="/model/tips/tips.js"></script>
+
         <div id="styleList"></div>
         <link href="/css/loading.css" rel="stylesheet">
         <div class="loading-container" id="loadingScreen">
@@ -326,7 +328,7 @@
         <script src="/view/embeddedHTML.js"></script>
         <script src="/view/highlight.min.js"></script>
         <script src="/view/activenav.js"></script>
-        <script src="/view/disp.js"></script>
+        <script src="/view/tips/tips.js"></script>
         <script>
             hljs.highlightAll();
             embedded_html("/template/tips.html", "tips");
@@ -334,14 +336,7 @@
             embedded_html("/template/header.html", "header-contents");
             embedded_html("/template/footer.html", "footer-contents");
             window.addEventListener("load", active_nav("tipsIndex"));
-            window.addEventListener(
-                "load", 
-                element_disp(
-                    {
-                        "dispIDList" : ["githubTip", "rn4020Tip", "linuxTip", "pythonTip"]
-                    }
-                )
-            );
+            new TipsView(tipsModel, "tips", "tips", ["githubTip", "rn4020Tip", "linuxTip", "pythonTip"]);
         </script>
     </footer>
 </html>
