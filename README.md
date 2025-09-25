@@ -52,7 +52,7 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
 <table>
     <tr>
         <td>
-            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BX293APEN&theme=github_dark" />
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BX293APEN&theme=github_dark&hide=Erlang,Elixir" />
         </td>
         <td>
             <img src="https://github-readme-stats.vercel.app/api?username=BX293APEN&show_icons=true&theme=github_dark" />
