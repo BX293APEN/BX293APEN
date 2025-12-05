@@ -16,38 +16,47 @@ Here are some ideas to get you started:
 
 <h1 align="left"> 
     BX293APEN 
-    <a href="https://github.com/BX293APEN/BX293APEN/blob/main/note/README.md">
-        <img src="https://img.shields.io/badge/-GitHub-181717.svg?logo=github&style=flat">
-    </a>
-    <a href="https://www.raspberrypi.com/software/">
-        <img src="https://img.shields.io/badge/-Raspberry%20Pi-C51A4A.svg?logo=raspberry-pi&style=flat">
-    </a>
-    <a href="https://www.python.org/">
-        <img src="https://img.shields.io/badge/-Python-F9DC3E.svg?logo=python&style=flat">
-    </a>
-    <a href="https://github.com/BX293APEN/BX293APEN/tree/main/note/OpenCV">
-        <img src="https://img.shields.io/badge/-C++-333.svg?logo=cplusplus&style=flat">
-    </a>
 </h1>
 
 <!-- 
 https://img.shields.io/badge/${subject}-${status}-${color}.svg
 -->
 
-<p align="right">
-    <a href="https://github.com/BX293APEN/BX293APEN/tree/main/note">
-        <img src="https://img.shields.io/badge/GitHub-Help-181717.svg?logo=github&style=flat">
-    </a>
-</p>
 
-<p align="left">
-    <a href="https://github.com/BX293APEN/BX293APEN">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=BX293APEN&repo=BX293APEN" />
-    </a>
-    <a href="https://github.com/BX293APEN/aiccmd">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=BX293APEN&repo=aiccmd" />
-    </a>
-</p>
+<!-- 
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=BX293APEN&repo=${リポジトリ名}" />
+-->
+
+<!-- 
+<img src="https://skillicons.dev/icons?i=github"/>
+-->
+
+<a href="https://bx293apen.github.io/">
+    <div 
+        role="group" 
+        style="
+            width:50%; 
+            display:flex;
+            align-items:center;
+            gap:16px;
+            margin:24px 0;
+            padding:16px;
+            border-radius:12px;
+            background-color:transparent;
+            border:1px solid #ccc;   /* ←ここで四角い枠線 */
+            border-radius:8px;
+        "
+    >
+        <div style="width:40px;height:40px;flex:0 0 auto;display:grid;place-items:center;">
+            <img src="https://bx293apen.github.io/img/PEN.png" title="とあるペンギンの実験室" style="width:100%;height:100%;object-fit:contain;display:block;">
+        </div>
+        <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:4px;">
+            <div style="font-weight:700;font-size:10px;line-height:1.2;color:#000;">とあるペンギンの実験室</div>
+            <div style="font-weight:700;font-size:20px;line-height:1.2;color:#1976D2;">とあるペンギンの実験室</div>
+            <div style="font-size:14px;color:#6b6b6b;">PEN's laboratory</div>
+        </div>
+    </div>
+</a>
 
 <table>
     <tr>
@@ -68,23 +77,5 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
 -->
 
 ---
-
-<p>
-    <a href ="https://github.com/BX293APEN/BX293APEN/blob/main/note/README.md"> 
-        <img src="https://skillicons.dev/icons?i=github"/>
-    </a>
-    <a href ="https://github.com/niXman/mingw-builds-binaries/releases"> 
-        <img src="https://skillicons.dev/icons?i=c"/>
-    </a>
-    <a href ="https://gnuwin32.sourceforge.net/packages/make.htm"> 
-        <img src="https://skillicons.dev/icons?i=cmake"/>
-    </a>
-    <a href ="https://github.com/BX293APEN/BX293APEN/blob/main/note/Vim/README.md"> 
-        <img src="https://skillicons.dev/icons?i=vim"/>
-    </a>
-    <a href ="https://bx293apen.github.io/"> 
-        <img src="https://skillicons.dev/icons?i=html"/>
-    </a>
-</p>
 
 ![](https://raw.githubusercontent.com/BX293APEN/BX293APEN/output/github-contribution-grid-snake.svg)
