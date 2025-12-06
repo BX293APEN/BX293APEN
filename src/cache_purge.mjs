@@ -28,4 +28,4 @@ async function purgeCamoCache(owner, repo) {
 }
 
 // 実行例
-purgeCamoCache("your-username", "your-repo");
+purgeCamoCache("BX293APEN", "BX293APEN");
