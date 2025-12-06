@@ -27,7 +27,7 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
 
 
 <!-- 
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=BX293APEN&repo=${リポジトリ名}" />
+<img src="https://github-readme-stats-private-eosin.vercel.app/api/pin/?username=BX293APEN&repo=${リポジトリ名}" />
 -->
 
 <!-- 
@@ -39,10 +39,10 @@ https://img.shields.io/badge/${subject}-${status}-${color}.svg
 <table>
     <tr>
         <td>
-            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BX293APEN&theme=github_dark&hide=Erlang,Elixir" />
+            <img src="https://github-readme-stats-private-eosin.vercel.app/api/top-langs/?username=BX293APEN&theme=github_dark&hide=Erlang,Elixir" />
         </td>
         <td>
-            <img src="https://github-readme-stats.vercel.app/api?username=BX293APEN&show_icons=true&theme=github_dark" />
+            <img src="https://github-readme-stats-private-eosin.vercel.app/api?username=BX293APEN&show_icons=true&theme=github_dark" />
         </td>
     </tr>
 </table>
