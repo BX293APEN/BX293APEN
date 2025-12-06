@@ -20,6 +20,6 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run purge script
-        run: node src/cache_purge.js
+        run: node src/cache_purge.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

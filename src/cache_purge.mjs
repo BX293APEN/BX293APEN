@@ -1,5 +1,5 @@
-const fetch = require("node-fetch"); // v2 をインストールして使う
-const { Octokit } = require("@octokit/rest");
+import fetch from "node-fetch";
+import { Octokit } from "@octokit/rest";
 
 const octokit = new Octokit({
     auth: process.env.GITHUB_TOKEN, // GitHub Actionsのsecretsに設定
