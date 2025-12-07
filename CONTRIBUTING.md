@@ -18,11 +18,11 @@ Here are some ideas to get you started:
 - バッジの作成  
 `https://img.shields.io/badge/${subject}-${status}-${color}.svg`
 
-- リポジトリカードの作成
+- リポジトリカードの作成  
 `https://github-readme-stats-private-eosin.vercel.app/api/pin/?username=BX293APEN&repo=${リポジトリ名}`
 
-- スキルアイコンの作成
+- スキルアイコンの作成  
 `https://skillicons.dev/icons?i=github`
 
-- トロフィーの表設定クエリ例
+- トロフィーの表設定クエリ例  
 `&column=x&row=y`
