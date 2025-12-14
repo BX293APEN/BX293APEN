@@ -1,19 +1,13 @@
 name: generate animation
 
+
 on:
-  # run automatically every 24 hours
-  schedule:
-    - cron: "0 */24 * * *" 
-  
-  # allows to manually run the job at any time
-  workflow_dispatch:
-  
-  # run on every push on the master branch
-  push:
+  push:                       # push時に実行
     branches:
-    - main
-    
-  
+      - main                  # mainブランチにpushされた時のみ
+  workflow_dispatch:          # 手動実行
+  schedule:
+    - cron: "*/30 * * * *"    # 30分毎に実行
 
 jobs:
   generate:
