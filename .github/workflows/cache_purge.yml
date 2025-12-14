@@ -1,12 +1,21 @@
 name: Purge Camo Cache
 
 on:
-  push:                   # push時に実行
+  push:                       # push時に実行
     branches:
-      - main              # mainブランチにpushされた時のみ
-  workflow_dispatch:      # 手動実行
+      - main                  # mainブランチにpushされた時のみ
+  workflow_dispatch:          # 手動実行
   schedule:
-    - cron: "0 0 * * *"   # 毎日0時に実行
+    - cron: "*/30 * * * *"    # 30分毎に実行
+
+#            ┌───────────── 分 (0 - 59)
+#            │ ┌───────────── 時 (0 - 23)
+#            │ │ ┌───────────── 日 (1 - 31)
+#            │ │ │ ┌───────────── 月 (1 - 12)
+#            │ │ │ │ ┌───────────── 曜日 (0 - 6)  ※0=日曜
+#            │ │ │ │ │
+#   - cron: "* * * * *"
+
 
 jobs:
   purge:
