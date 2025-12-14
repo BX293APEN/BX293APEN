@@ -20,6 +20,7 @@
 
 ---
 
+<img style="width:50%" src="https://raw.githubusercontent.com/BX293APEN/BX293APEN.github.io/main/img/welcome.svg" />  
 <a href="https://bx293apen.github.io/">
     <img style="width:50%" src="https://raw.githubusercontent.com/BX293APEN/BX293APEN-IMAGE/main/assets/img.png" />
 </a>
