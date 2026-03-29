@@ -5,17 +5,17 @@
     </a>
 </h1>
 
-<table>
-    <tr align="center" style="width:100%">
-        <td style="width:50%">
+<table style="width:100vw">
+    <tr align="center" style="width:100vw">
+        <td style="width:50vw">
             <a href="https://bx293apen.github.io/">
-                <img style="width:50%" src="./img/penanime.svg" />
+                <img src="./img/penanime.svg" />
             </a><br>
             <a href="https://bx293apen.github.io/">
-                <img style="width:50%" src="https://raw.githubusercontent.com/BX293APEN/BX293APEN-IMAGE/main/assets/img.png" />
+                <img src="https://raw.githubusercontent.com/BX293APEN/BX293APEN-IMAGE/main/assets/img.png" />
             </a>
         </td>
-        <td style="width:50%">
+        <td style="width:50vw">
             <img src="https://github-readme-stats-private-eosin.vercel.app/api/top-langs/?username=BX293APEN&theme=github_dark&hide=Erlang,Elixir" />
         </td>
         <!--
