@@ -16,7 +16,7 @@
             </a>
         </td>
         <td style="width:50vw">
-            <img src="https://github-readme-stats-private-eosin.vercel.app/api/top-langs/?username=BX293APEN&theme=github_dark&hide=Erlang,Elixir" />
+            <img style="width:50vw" src="https://github-readme-stats-private-eosin.vercel.app/api/top-langs/?username=BX293APEN&theme=github_dark&hide=Erlang,Elixir" />
         </td>
         <!--
         <td>
