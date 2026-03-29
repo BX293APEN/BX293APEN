@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 130 130"
+     width="260"
+     height="260">
+
+    <path
+        id="pen"
+        pathLength="900"
+        d="
+            M 65 20
+            L 45 30
+            L 20 20
+            L 20 100
+            L 45 90
+            L 65 100
+            L 65 20
+
+            L 85 30
+            L 105 20
+            L 105 100
+
+        "
+        fill="none"
+        stroke="#ff0000"
+        stroke-width="12"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+    >
+        <animate
+            id="penAnim"
+            attributeName="stroke-dasharray"
+            from="0, 1000"
+            to="1000, 0"
+            dur="2s"
+            fill="freeze"
+        />
+    </path>
+
+    <path
+        pathLength="899"
+        d="
+            M 93 40
+            L 123 70
+
+        "
+        fill="none"
+        stroke="#ff0000"
+        stroke-width="12"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-dasharray="900"
+        stroke-dashoffset="900"
+    >
+        <animate
+            attributeName="stroke-dasharray"
+            from="0, 900"
+            to="900, 0"
+            dur="1s"
+            begin="penAnim.end"
+            fill="freeze"
+        />
+    </path>
+</svg>
