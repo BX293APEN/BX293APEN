@@ -9,7 +9,7 @@
     <tr align="center" style="width:100vw">
         <td style="width:50vw">
             <a href="https://bx293apen.github.io/">
-                <img src="./img/penanime.svg" />
+                <img style="width:50vw" src="./img/penanime.svg" />
             </a><br>
             <a href="https://bx293apen.github.io/">
                 <img src="https://raw.githubusercontent.com/BX293APEN/BX293APEN-IMAGE/main/assets/img.png" />
