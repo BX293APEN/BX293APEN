@@ -90,7 +90,7 @@
         y="0" 
         width="130" 
         height="130" 
-        fill="#ffffff" 
+        fill="#00000000" 
         opacity="0" 
     >
         <animate 
