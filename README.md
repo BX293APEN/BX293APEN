@@ -28,11 +28,11 @@
 
 
 ```math
-R &= R_{0} \times e^{B \left(\frac{1}{T+273}-\frac{1}{T_{0}+273} \right)}
+R = R_{0} \times e^{B \left(\frac{1}{T+273}-\frac{1}{T_{0}+273} \right)}
 ```
 
 $$
-T &= \frac{B(T_{0} + 273)}{(T_{0} + 273) \times \log_{e} \left(\frac{R}{R_{0}} \right) + B} - 273
+T = \frac{B(T_{0} + 273)}{(T_{0} + 273) \times \log_{e} \left(\frac{R}{R_{0}} \right) + B} - 273
 $$
 
 
