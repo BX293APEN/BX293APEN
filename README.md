@@ -28,7 +28,7 @@
 
 
 $$
-T = \frac{B(T_{0} + 273)}{(T_{0} + 273) \times \log_{e} \frac{R}{R_{0}} \plus B} \minus 273
+T = \frac{B(T_{0} + 273)}{(T_{0} + 273) \times \log_{e} \frac{R}{R_{0}} + B} - 273
 $$
 
 
