@@ -28,7 +28,7 @@
 
 
 ```math
-R = R_{0} \times e^{B \left(\frac{1}{T+273}-\frac{1}{T_{0}+273} \right)}
+R = R_{0} \times e^{\left(B \left(\frac{1}{T+273}-\frac{1}{T_{0}+273} \right) \right)}
 ```
 
 $$
