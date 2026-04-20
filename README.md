@@ -27,14 +27,13 @@
 </table>
 
 
-$$
-T = \frac{B(T_{0} + 273)}{(T_{0} + 273) \times \log_{e} \frac{R}{R_{0}} + B} - 273
-$$
-
-
 ```math
-R = R_{0} \times e^(B(\frac{1}{T+273}-\frac{1}{T_{0}+273}))
+R = R_{0} \times e^{B \left(\frac{1}{T+273}-\frac{1}{T_{0}+273} \right)}
 ```
+
+$$
+T = \frac{B(T_{0} + 273)}{(T_{0} + 273) \times \log_{e} \!\left(\frac{R}{R_{0}} \right) + B} - 273
+$$
 
 
 <!--![trophy](https://github-profile-trophy-pen.vercel.app/?username=BX293APEN&theme=onedark)-->
