@@ -30,16 +30,16 @@
     <tr>
         <td>
             <div>
-                ```math
-                R = R_{0} \times e^{\left(B \left(\frac{1}{T+273}-\frac{1}{T_{0}+273} \right) \right)}
-                ```
+```math
+R = R_{0} \times e^{\left(B \left(\frac{1}{T+273}-\frac{1}{T_{0}+273} \right) \right)}
+```
             </div>
         </td>
         <td>
             <div>
-                $$
-                T = \frac{B(T_{0} + 273)}{(T_{0} + 273) \times \log_{e} \left(\frac{R}{R_{0}} \right) + B} - 273
-                $$
+$$
+T = \frac{B(T_{0} + 273)}{(T_{0} + 273) \times \log_{e} \left(\frac{R}{R_{0}} \right) + B} - 273
+$$
             </div>
         </td>
     </tr>
