@@ -33,10 +33,7 @@ $$
 
 
 ```math
-\left( \sum_{k=1}^n a_k b_k \right)^2
-\leq
-\left( \sum_{k=1}^n a_k^2 \right)
-\left( \sum_{k=1}^n b_k^2 \right)
+R = R_{0} \times e^(B(\frac{1}{T+273}-\frac{1}{T_{0}+273}))
 ```
 
 
