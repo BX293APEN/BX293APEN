@@ -29,6 +29,12 @@
 
 
 $ \sqrt{3x-1} + (1+x)^2 $
+
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+
+
 ```math
 \left( \sum_{k=1}^n a_k b_k \right)^2
 \leq
