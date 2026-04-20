@@ -27,9 +27,6 @@
 </table>
 
 
-
-abc $ \sqrt{3x-1} + (1+x)^2 $ def
-
 $$
 x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 $$
