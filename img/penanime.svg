@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 140" width="260" height="280">
+
+    <!-- パス1: stroke-dashoffset でアニメーション -->
+    <path 
+        id="pen" 
+        pathLength="900" 
+        d="
+            M 65 20
+            L 45 30
+            L 20 20
+            L 20 100
+            L 45 90
+            L 65 100
+            L 65 20
+            L 85 30
+            L 105 20
+            L 105 100
+        " 
+        fill="none" 
+        stroke="#ff0000" 
+        stroke-width="12" 
+        stroke-linejoin="round" 
+        stroke-linecap="round" 
+        stroke-dasharray="900" 
+        stroke-dashoffset="900" 
+    >
+        <!-- まず dashoffset を 900→0 に（描画） -->
+        <animate 
+            id="penAnim" 
+            attributeName="stroke-dashoffset" 
+            from="900" 
+            to="0" 
+            dur="2s" 
+            fill="freeze" 
+            begin="0s; clear.end" 
+            repeatCount="1" 
+        />
+        <!-- クリア後にリセット -->
+        <animate 
+            attributeName="stroke-dashoffset" 
+            from="0" 
+            to="900" 
+            dur="0.001s" 
+            fill="freeze" 
+            begin="clear.begin" 
+            repeatCount="1" 
+        />
+    </path>
+
+    <!-- パス2 -->
+    <path 
+        pathLength="900" 
+        d="
+            M 93 40
+            L 123 70
+        " 
+        fill="none" 
+        stroke="#ff0000" 
+        stroke-width="12" 
+        stroke-linejoin="round" 
+        stroke-linecap="round" 
+        stroke-dasharray="900" 
+        stroke-dashoffset="900" 
+    >
+        <animate 
+            id="secondAnim" 
+            attributeName="stroke-dashoffset" 
+            from="900" 
+            to="0" 
+            dur="1s" 
+            begin="penAnim.end" 
+            fill="freeze" 
+            repeatCount="1" 
+        />
+        <!-- クリア後にリセット -->
+        <animate 
+            attributeName="stroke-dashoffset" 
+            from="0" 
+            to="900" 
+            dur="0.001s" 
+            fill="freeze" 
+            begin="clear.begin" 
+            repeatCount="1" 
+        />
+    </path>
+
+    <!-- クリア用白矩形 -->
+    <rect 
+        x="0" 
+        y="0" 
+        width="130" 
+        height="130" 
+        fill="#00000000" 
+        opacity="0" 
+    >
+        <animate 
+            id="clear" 
+            attributeName="opacity" 
+            from="0" 
+            to="1" 
+            dur="0.3s" 
+            begin="secondAnim.end + 0.5s" 
+            fill="freeze" 
+        />
+        <!-- クリア後に自分自身を非表示に戻す -->
+        <animate 
+            attributeName="opacity" 
+            from="1" 
+            to="0" 
+            dur="0.001s" 
+            fill="freeze" 
+            begin="clear.end" 
+            repeatCount="1" 
+        />
+    </rect>
+</svg>

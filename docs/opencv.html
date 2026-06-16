@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja" data-bs-theme="auto">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="google-site-verification" content="OC87FYYbTNU7c3Q1vn3qee5kXLtXMjotpx0iGK1ZPUU" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="/model/index/index.js"></script>
+        <script src="/model/tips/tips.js"></script>
+
+        <div id="styleList"></div>
+        <link href="/css/loading.css" rel="stylesheet">
+        <div class="loading-container" id="loadingScreen">
+            <div class="loading"></div>
+        </div>
+        <script src="/view/loading.js"></script>
+        <title>OpenCV</title>
+    </head>
+    <body>
+        <div id="header-contents"></div>
+        <div class="container pt-3">
+            <main>
+                <div class="row g-5">
+                    <div class="col-md-8">
+                        <h2 class="pt-4 mt-4 border-bottom fw-bold">
+                            OpenCV
+                        </h2>
+                        <article class="blog-post">
+                            <h3 class="pt-4 mt-4 border-bottom fw-bold">
+                                cv::Mat
+                            </h3>
+                            <div class="table-responsive">
+                                <table class="table table-bordered w-100">
+                                    <tr>
+                                        <th>
+                                            Method
+                                        </th>
+                                        <th>
+                                            Description
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <pre><code class="language-cpp">.rows</code></pre>
+                                        </td>
+                                        <td>
+                                            行数
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <pre><code class="language-cpp">.cols</code></pre>
+                                        </td>
+                                        <td>
+                                            列数
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <pre><code class="language-cpp">.dims</code></pre>
+                                        </td>
+                                        <td>
+                                            次元数
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <pre><code class="language-cpp">.channels()</code></pre>
+                                        </td>
+                                        <td>
+                                            チャンネル数
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <pre><code class="language-cpp">.elemSize()</code></pre>
+                                        </td>
+                                        <td>
+                                            1要素のサイズ [Byte]
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <pre><code class="language-cpp">.elemSize1()</code></pre>
+                                        </td>
+                                        <td>
+                                            1要素内の1ch分のサイズ [Byte]
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <pre><code class="language-cpp">.total()</code></pre>
+                                        </td>
+                                        <td>
+                                            要素の総数
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <pre><code class="language-cpp">.step</code></pre>
+                                        </td>
+                                        <td>
+                                            ステップ数 [Byte]
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <pre><code class="language-cpp">.data[]</code></pre>
+                                        </td>
+                                        <td>
+                                            データ配列
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                            
+                        </article>
+
+                        <article class="blog-post">
+                            <h3 class="pt-4 mt-4 border-bottom fw-bold">
+                                特徴量ファイル
+                            </h3>
+                            <div class="table-responsive">
+                                <table class="table table-bordered w-100">
+                                    <tr>
+                                        <th>
+                                            FEATURE_DATA_FILE
+                                        </th>
+                                        <th>
+                                            場所
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            haarcascade_eye.xml
+                                        </td>
+                                        <td>
+                                            目
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            haarcascade_fullbody.xml
+                                        </td>
+                                        <td>
+                                            全身
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            haarcascade_upperbody.xml
+                                        </td>
+                                        <td>
+                                            上半身
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            haarcascade_lowerbody.xml
+                                        </td>
+                                        <td>
+                                            下半身
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            haarcascade_smile.xml
+                                        </td>
+                                        <td>
+                                            笑顔
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                        </article>
+                        
+                    
+                    </div>
+                    <div class="col-md-4">
+                        <div class="position-sticky" style="top: 2rem;">
+                            <div id="tips"></div>
+                        </div>
+                    </div>
+                </div>
+            
+            </main>
+        </div>
+    </body>
+    <footer class="container border-top" id="footer-contents"> <!-- FOOTER -->
+        <script src="/view/bootstrap.bundle.min.js"></script>
+        <script src="/view/search.js"></script>
+        <script src="/view/embeddedHTML.js"></script>
+        <script src="/view/highlight.min.js"></script>
+        <script src="/view/activenav.js"></script>
+        <script src="/view/tips/tips.js"></script>
+        <script>
+            hljs.highlightAll();
+            
+            embedded_html("/template/styleConfig.html", "styleList");
+            embedded_html("/template/header.html", "header-contents");
+            embedded_html("/template/footer.html", "footer-contents");
+            window.addEventListener("load", active_nav("tipsIndex"));
+            new TipsView(tipsModel, "tips", "tips", ["visualstudioTip", "pythonTip", "cTip"]);
+        </script>
+    </footer>
+</html>

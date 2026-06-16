@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja" data-bs-theme="auto">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="google-site-verification" content="OC87FYYbTNU7c3Q1vn3qee5kXLtXMjotpx0iGK1ZPUU" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="/model/index/index.js"></script>
+        <script src="/model/tips/tips.js"></script>
+
+        <div id="styleList"></div>
+        <link href="/css/loading.css" rel="stylesheet">
+        <div class="loading-container" id="loadingScreen">
+            <div class="loading"></div>
+        </div>
+        <script src="/view/loading.js"></script>
+        <title>GitHub Tips</title>
+    </head>
+    <body>
+        <div id="header-contents"></div>
+        <div class="container pt-3">
+            <main>
+                <div class="row g-5">
+                    <div class="col-md-8">
+                        <h2 class="pt-4 mt-4 border-bottom fw-bold">
+                            GitHub Tips
+                        </h2>
+                    
+                        <article class="blog-post" id = "article_top">
+
+                            <h3 class="mt-5 mb-3"> 用語 </h3>
+                            <p>
+                                <table class="table table-striped-columns table-bordered">
+                                    <tr>
+                                        <th>用語</th>
+                                        <th>説明</th>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Git</b></td>
+                                        <td>分散型バージョン管理システム</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>GitHub</b></td>
+                                        <td>Git を利用したWebアプリケーション</td>
+                                    </tr>
+                                </table>
+                            </p>
+
+                            <h3 class="mt-5 mb-3"> gitコマンドの使い方 </h3>
+                            <a href ="https://gitforwindows.org/"> 
+                                <img src="/img/Git.svg" width = "100"/>
+                            </a>
+                            <br>
+                            <a href ="https://gitforwindows.org/"> 
+                                <b>Install</b>
+                            </a>
+
+                            <h4 class="mt-5 mb-3"> 設定 </h4>
+                            <h5 class="mt-5 mb-3"> ユーザ登録 </h5>
+                            <pre><code class="language-bash bg-body-tertiary">git config --global user.name [名前]
+git config --global user.email [メールアドレス]</code></pre>
+
+                            <h6 class="mt-5 mb-3"> 確認 </h6>
+
+                            <dl>
+                                <dt>
+                                    Windows 
+                                </dt>
+                                <dd>
+                                    <pre><code class="language-bash bg-body-tertiary">git config --list | findstr "user.name"
+git config --list | findstr "user.email"</code></pre>
+                                </dd>
+                                <dt>
+                                    Linux
+                                </dt>
+                                <dd>
+                                    <pre><code class="language-bash bg-body-tertiary">git config --list | grep "user.name"
+git config --list | grep "user.email"</code></pre>
+                                </dd>
+                            </dl>
+
+                            <h5 class="mt-5 mb-3"> Alias設定 </h5>
+                            <pre><code class="language-bash bg-body-tertiary">git config --global alias.[新たに設定したいコマンド名] [gitコマンド]</code></pre>
+                            <br>
+                            <code class="language-bash bg-body-tertiary">git [新たに設定したいコマンド名]</code>を打つと<code class="language-bash bg-body-tertiary">git [gitコマンド]</code>が実行される
+
+                            <h5 class="mt-5 mb-3"> ローカルリポジトリの状態を確認する </h5>
+                            <pre><code class="language-bash bg-body-tertiary">git status</code></pre>
+                            
+                            <h5 class="mt-5 mb-3"> ログの確認 </h5>
+                            <pre><code class="language-bash bg-body-tertiary">git log
+git log - [確認したいログの数]</code></pre>
+
+                            <h4 class="mt-5 mb-3"> リポジトリ操作 </h4>
+                            <h5 class="mt-5 mb-3"> リポジトリの設定 </h5>
+                            <h6 class="mt-5 mb-3"> ローカルリポジトリの作成 </h6>
+                            <pre><code class="language-bash bg-body-tertiary">git init</code></pre>
+                            <ul>
+                                <li>
+                                    .gitという隠しフォルダが生成される(このディレクトリ内での作業が可能になる)
+                                </li>
+                            </ul>
+
+                            <h6 class="mt-5 mb-3"> リモートリポジトリの指定 </h6>
+                            <pre><code class="language-bash bg-body-tertiary">git remote add origin [リポジトリのURL]</code></pre>
+
+                            <h6 class="mt-5 mb-3"> メインブランチを指定 </h6>
+                            <pre><code class="language-bash bg-body-tertiary">git branch -M main</code></pre>
+
+                            <h5 class="mt-5 mb-3"> アップロード </h5>
+
+                            <img src="./img/upload.gif" width = "70%"><br>
+                            <br>
+
+
+                            <h6 class="mt-5 mb-3"> アップロードするファイルを指定 </h6>
+
+                            <pre><code class="language-bash bg-body-tertiary">git add [ファイル名, ディレクトリ名, -A:全て]</code></pre>
+
+                            <h6 class="mt-5 mb-3"> ローカルリポジトリにコミット </h6>
+                            <pre><code class="language-bash bg-body-tertiary">git commit -m "コメント"</code></pre>
+
+                            <h6 class="mt-5 mb-3"> リモートリポジトリにプッシュ </h6>
+                            <pre><code class="language-bash bg-body-tertiary">git push -u origin main  // 初回のみ (競合解決)
+git push
+git push -f //強制push</code></pre>
+                            <ul>
+                                <li>
+                                    <code class="language-bash bg-body-tertiary">-u</code> : --set-upstream
+                                </li>
+                                <li>
+                                    ローカルブランチの上流が [ブランチ名] へ移る
+                                </li>
+                            </ul>
+                            <h5 class="mt-5 mb-3"> ダウンロード </h5>
+                            <img src="./img/download.gif" width = "70%"><br>
+                            <br>
+
+                            <h6 class="mt-5 mb-3"> clone </h6>
+                            <ul>
+                                <li>
+                                    リモートリポジトリ上の全てのファイルがダウンロードされる
+                                </li>
+                            </ul>
+                            <pre><code class="language-bash bg-body-tertiary">git clone [リポジトリのURL]</code></pre>
+
+                            <h6 class="mt-5 mb-3"> pull </h6>
+                            <ul>
+                                <li>
+                                    更新されているリモートリポジトリのファイルをローカルリポジトリにダウンロード
+                                </li>
+                            </ul>
+                            <pre><code class="language-bash bg-body-tertiary">git pull origin [ブランチ名] // 初回のみ
+git pull</code></pre>
+
+                            <h5 class="mt-5 mb-3"> ファイル復元 </h5>
+                            <pre><code class="language-bash bg-body-tertiary">git restore [ファイル名, ディレクトリ名]</code></pre>
+                            <h5 class="mt-5 mb-3"> ステージングエリアに保管されているファイルの取り消し </h5>
+                            <pre><code class="language-bash bg-body-tertiary">git restore --staged [取り消したいファイル・フォルダ名]</code></pre>
+
+                            <h5 class="mt-5 mb-3"> プッシュを取り消す </h5>
+                            <pre><code class="language-bash bg-body-tertiary">git reset --hard [取り消すプッシュの直前のコミットハッシュ値] </code></pre>
+                            <code class="language-bash bg-body-tertiary">[取り消すプッシュの直前のコミットハッシュ値]</code> : <code class="language-bash bg-body-tertiary">git log</code>で確認
+
+                            <h5 class="mt-5 mb-3"> プッシュを打ち消す(履歴を残しながら戻す) </h5>
+                            <pre><code class="language-bash bg-body-tertiary">git revert [取り消すプッシュの直前のコミットハッシュ値]..HEAD </code></pre>
+                            <code class="language-bash bg-body-tertiary">[取り消すプッシュの直前のコミットハッシュ値]</code> : <code class="language-bash bg-body-tertiary">git log</code>で確認
+
+                            <h4 class="mt-5 mb-3"> ブランチ操作 </h4>
+                            <h5 class="mt-5 mb-3"> ブランチ確認 </h5>
+                            <pre><code class="language-bash bg-body-tertiary">git branch -a</code></pre>
+
+                            <h5 class="mt-5 mb-3"> ブランチ作成・移動 </h5>
+                            <pre><code class="language-bash bg-body-tertiary">git switch -c [新しいブランチ名, 移動先ブランチ名]</code></pre>
+
+                            <h5 class="mt-5 mb-3"> ブランチの移動 </h5>
+                            <pre><code class="language-bash bg-body-tertiary">git switch [切り替え先のブランチ名]</code></pre>
+
+                            <h5 class="mt-5 mb-3"> ブランチ合成 </h5>
+                            <pre><code class="language-bash bg-body-tertiary">git merge [併合したいブランチ]
+git merge --allow-unrelated-histories //履歴の異なるブランチを合成することを許可する</code></pre>
+                            → 自ブランチに<code class="language-bash bg-body-tertiary">[併合したいブランチ]</code>が合成される
+
+                            <h5 class="mt-5 mb-3"> ブランチ名変更 </h5>
+                            <pre><code class="language-bash bg-body-tertiary">git branch -m [元のブランチ名] [変更したブランチ名]</code></pre>
+
+                            <h4 class="mt-5 mb-3"> ブランチのマージ </h4>
+
+                            <dl>
+                                <dt>
+                                    1. 併合先のブランチへ移動
+                                </dt>
+                                <dd>
+                                    <pre><code class="language-bash bg-body-tertiary">git switch [併合先ブランチ]</code></pre>
+                                </dd>
+                                <dt>
+                                    2. ブランチを併合
+                                </dt>
+                                <dd>
+                                    <pre><code class="language-bash bg-body-tertiary">git merge --allow-unrelated-histories [併合元のブランチ]</code></pre>
+                                </dd>
+                                <dt>
+                                    3. 混乱しないように、併合元のブランチを削除(推奨)
+                                </dt>
+                                <dd></dd>
+                            </dl>
+                            <h5 class="mt-5 mb-3"> ローカルブランチ削除 </h5>
+                            <pre><code class="language-bash bg-body-tertiary">git branch -d [削除したいブランチ] // 変更をマージした後実行可能
+git branch -D [過去の変更まで完全削除したいブランチ]</code></pre>
+
+                            <h5 class="mt-5 mb-3"> リモートリポジトリのブランチを削除 </h5>
+                            <pre><code class="language-bash bg-body-tertiary">git push origin --delete [削除したいブランチ名]</code></pre>
+
+                            <h5 class="mt-5 mb-3"> マージの取り消し </h5>
+                            <pre><code class="language-bash bg-body-tertiary">git merge --abort</code></pre>
+
+                            <h4 class="mt-5 mb-3"> 履歴を別ブランチに移し、最新の状態のみ保持したmainブランチを作成する </h4>
+                            <dl>
+                                <dt>
+                                    1. 現在のmainブランチをarchiveブランチにリネームする
+                                </dt>
+                                <dd>
+                                    <pre><code class="language-bash bg-body-tertiary">git branch -m main archive</code></pre>
+                                </dd>
+                                <dt>
+                                    2. 履歴なしの新しいmainブランチを作成し、現在のファイルをコミットする
+                                </dt>
+                                <dd>
+                                    <pre><code class="language-bash bg-body-tertiary">git checkout --orphan main        # --orphan : 履歴のみ削除したブランチを作成
+git commit -m "Initial commit"</code></pre>
+                                </dd>
+                                <dt>
+                                    3. リモートリポジトリにpushして適用
+                                </dt>
+                                <dd>
+                                    <pre><code class="language-bash bg-body-tertiary">git push -f origin main
+git push -u origin archive</code></pre>
+                                </dd>
+                            </dl>
+
+                            <h4 class="mt-5 mb-3"> Gitの更新 </h4>
+                            <dl>
+                                <dt>
+                                    Windows 
+                                </dt>
+                                <dd>
+                                    <pre><code class="language-bash bg-body-tertiary">git update-git-for-windows</code></pre>
+                                </dd>
+                            </dl>
+
+                        </article>
+                    
+                    </div>
+                    <div class="col-md-4">
+                        <div class="position-sticky" style="top: 2rem;">
+                            <div class="p-4">
+                                <h4 class="fst-italic border-bottom">References</h4>
+                                <blockquote cite="https://qiita.com/T-H9703EnAc/items/4fbe6593d42f9a844b1c">
+                                    <a href="https://qiita.com/T-H9703EnAc/items/4fbe6593d42f9a844b1c">
+                                        Git インストール方法
+                                    </a>
+                                </blockquote>
+                                <blockquote cite="https://qiita.com/ayatokura/items/9eabb7ae20752e6dc79d">
+                                    <a href="https://qiita.com/ayatokura/items/9eabb7ae20752e6dc79d">
+                                        GitHub アカウント作成方法
+                                    </a>
+                                </blockquote>
+                            </div>
+
+                            <div class="p-4">
+                                <h4 class="fst-italic border-bottom">Table of Contents</h4>
+                                <ol class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="#article_top">Top</a>
+                                    </li>
+    
+                                </ol>
+                            </div>
+
+                            <div class="p-4">
+                                <div id="tips"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </main>
+        </div>
+    </body>
+    <footer class="container border-top" id="footer-contents"> <!-- FOOTER -->
+        <script src="/view/bootstrap.bundle.min.js"></script>
+        <script src="/view/search.js"></script>
+        <script src="/view/embeddedHTML.js"></script>
+        <script src="/view/highlight.min.js"></script>
+        <script src="/view/activenav.js"></script>
+        <script src="/view/tips/tips.js"></script>
+        <script>
+            hljs.highlightAll();
+            embedded_html("/template/styleConfig.html", "styleList");
+            embedded_html("/template/header.html", "header-contents");
+            embedded_html("/template/footer.html", "footer-contents");
+            window.addEventListener("load", active_nav("tipsIndex"));
+            new TipsView(tipsModel, "tips", "tips", ["vimTip", "linuxTip", "pythonTip"]);
+        </script>
+    </footer>
+</html>
