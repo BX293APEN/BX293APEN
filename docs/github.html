@@ -27,7 +27,7 @@
                     
                         <article class="blog-post" id = "article_top">
 
-                            <h3 class="mt-5 mb-3"> 用語 </h3>
+                            <h3 class="mt-5 mb-3" id="term"> 用語 </h3>
                             <p>
                                 <table class="table table-striped-columns table-bordered">
                                     <tr>
@@ -45,7 +45,7 @@
                                 </table>
                             </p>
 
-                            <h3 class="mt-5 mb-3"> gitコマンドの使い方 </h3>
+                            <h3 class="mt-5 mb-3" id="command" > gitコマンドの使い方 </h3>
                             <a href ="https://gitforwindows.org/"> 
                                 <img src="/img/Git.svg" width = "100"/>
                             </a>
@@ -54,7 +54,7 @@
                                 <b>Install</b>
                             </a>
 
-                            <h4 class="mt-5 mb-3"> 設定 </h4>
+                            <h4 class="mt-5 mb-3" id="config"> 設定 </h4>
                             <h5 class="mt-5 mb-3"> ユーザ登録 </h5>
                             <pre><code class="language-bash bg-body-tertiary">git config --global user.name [名前]
 git config --global user.email [メールアドレス]</code></pre>
@@ -78,20 +78,20 @@ git config --list | grep "user.email"</code></pre>
                                 </dd>
                             </dl>
 
-                            <h5 class="mt-5 mb-3"> Alias設定 </h5>
+                            <h5 class="mt-5 mb-3" id="alias"> Alias設定 </h5>
                             <pre><code class="language-bash bg-body-tertiary">git config --global alias.[新たに設定したいコマンド名] [gitコマンド]</code></pre>
                             <br>
                             <code class="language-bash bg-body-tertiary">git [新たに設定したいコマンド名]</code>を打つと<code class="language-bash bg-body-tertiary">git [gitコマンド]</code>が実行される
 
-                            <h5 class="mt-5 mb-3"> ローカルリポジトリの状態を確認する </h5>
+                            <h5 class="mt-5 mb-3" id="status"> ローカルリポジトリの状態を確認する </h5>
                             <pre><code class="language-bash bg-body-tertiary">git status</code></pre>
                             
-                            <h5 class="mt-5 mb-3"> ログの確認 </h5>
+                            <h5 class="mt-5 mb-3" id="log"> ログの確認 </h5>
                             <pre><code class="language-bash bg-body-tertiary">git log
 git log - [確認したいログの数]</code></pre>
 
-                            <h4 class="mt-5 mb-3"> リポジトリ操作 </h4>
-                            <h5 class="mt-5 mb-3"> リポジトリの設定 </h5>
+                            <h4 class="mt-5 mb-3" id="repo"> リポジトリ操作 </h4>
+                            <h5 class="mt-5 mb-3" id="repo-config"> リポジトリの設定 </h5>
                             <h6 class="mt-5 mb-3"> ローカルリポジトリの作成 </h6>
                             <pre><code class="language-bash bg-body-tertiary">git init</code></pre>
                             <ul>
@@ -106,7 +106,7 @@ git log - [確認したいログの数]</code></pre>
                             <h6 class="mt-5 mb-3"> メインブランチを指定 </h6>
                             <pre><code class="language-bash bg-body-tertiary">git branch -M main</code></pre>
 
-                            <h5 class="mt-5 mb-3"> アップロード </h5>
+                            <h5 class="mt-5 mb-3" id="upload"> アップロード </h5>
 
                             <img src="./img/upload.gif" width = "70%"><br>
                             <br>
@@ -131,7 +131,7 @@ git push -f //強制push</code></pre>
                                     ローカルブランチの上流が [ブランチ名] へ移る
                                 </li>
                             </ul>
-                            <h5 class="mt-5 mb-3"> ダウンロード </h5>
+                            <h5 class="mt-5 mb-3" id="download"> ダウンロード </h5>
                             <img src="./img/download.gif" width = "70%"><br>
                             <br>
 
@@ -152,8 +152,11 @@ git push -f //強制push</code></pre>
                             <pre><code class="language-bash bg-body-tertiary">git pull origin [ブランチ名] // 初回のみ
 git pull</code></pre>
 
-                            <h5 class="mt-5 mb-3"> ファイル復元 </h5>
+                            <h5 class="mt-5 mb-3" id="restore"> ファイル復元 </h5>
                             <pre><code class="language-bash bg-body-tertiary">git restore [ファイル名, ディレクトリ名]</code></pre>
+
+                            <h4 class="mt-5 mb-3" id="cancel"> 状態の取り消し </h4>
+
                             <h5 class="mt-5 mb-3"> ステージングエリアに保管されているファイルの取り消し </h5>
                             <pre><code class="language-bash bg-body-tertiary">git restore --staged [取り消したいファイル・フォルダ名]</code></pre>
 
@@ -177,7 +180,7 @@ git pull</code></pre>
                             <pre><code class="language-bash bg-body-tertiary">git revert [取り消すプッシュの直前のコミットハッシュ値]..HEAD </code></pre>
                             <code class="language-bash bg-body-tertiary">[取り消すプッシュの直前のコミットハッシュ値]</code> : <code class="language-bash bg-body-tertiary">git log</code>で確認
 
-                            <h4 class="mt-5 mb-3"> ブランチ操作 </h4>
+                            <h4 class="mt-5 mb-3" id="branch"> ブランチ操作 </h4>
                             <h5 class="mt-5 mb-3"> ブランチ確認 </h5>
                             <pre><code class="language-bash bg-body-tertiary">git branch -a</code></pre>
 
@@ -249,7 +252,7 @@ git push -u origin archive</code></pre>
                                 </dd>
                             </dl>
 
-                            <h4 class="mt-5 mb-3"> Gitの更新 </h4>
+                            <h4 class="mt-5 mb-3" id="update"> Gitの更新 </h4>
                             <dl>
                                 <dt>
                                     Windows 
@@ -284,7 +287,48 @@ git push -u origin archive</code></pre>
                                     <li>
                                         <a href="#article_top">Top</a>
                                     </li>
-    
+                                    <li>
+                                        <a href="#term">用語</a>
+                                    </li>
+                                    <li>
+                                        <a href="#command">gitコマンドの使い方</a>
+                                    </li>
+                                    <li>
+                                        <a href="#config">設定</a>
+                                    </li>
+                                    <li>
+                                        <a href="#alias">Alias</a>
+                                    </li>
+                                    <li>
+                                        <a href="#status">ローカルリポジトリの状態を確認する</a>
+                                    </li>
+                                    <li>
+                                        <a href="#log">ログの確認</a>
+                                    </li>
+                                    <li>
+                                        <a href="#repo">リポジトリ操作</a>
+                                    </li>
+                                    <li>
+                                        <a href="#repo-config">リポジトリの設定</a>
+                                    </li>
+                                    <li>
+                                        <a href="#upload">アップロード</a>
+                                    </li>
+                                    <li>
+                                        <a href="#download">ダウンロード</a>
+                                    </li>
+                                    <li>
+                                        <a href="#restore">ファイル復元</a>
+                                    </li>
+                                    <li>
+                                        <a href="#cancel">状態の取り消し</a>
+                                    </li>
+                                    <li>
+                                        <a href="#branch">ブランチ操作</a>
+                                    </li>
+                                    <li>
+                                        <a href="#update">Gitの更新</a>
+                                    </li>
                                 </ol>
                             </div>
 
