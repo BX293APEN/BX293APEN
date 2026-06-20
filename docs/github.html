@@ -157,6 +157,18 @@ git pull</code></pre>
                             <h5 class="mt-5 mb-3"> ステージングエリアに保管されているファイルの取り消し </h5>
                             <pre><code class="language-bash bg-body-tertiary">git restore --staged [取り消したいファイル・フォルダ名]</code></pre>
 
+                            <h5 class="mt-5 mb-3"> add 取り消し </h5>
+                            <pre><code class="language-bash bg-body-tertiary">git reset</code></pre>
+
+                            <h5 class="mt-5 mb-3"> commit メッセージの変更 </h5>
+                            <pre><code class="language-bash bg-body-tertiary">git commit --amend -m "RENAME"</code></pre>
+
+                            <h5 class="mt-5 mb-3"> commit 取り消し </h5>
+                            <pre><code class="language-bash bg-body-tertiary">git reset --soft HEAD~1</code></pre>
+
+                            <h5 class="mt-5 mb-3"> add &amp; commit 取り消し </h5>
+                            <pre><code class="language-bash bg-body-tertiary">git reset HEAD~1</code></pre>
+
                             <h5 class="mt-5 mb-3"> プッシュを取り消す </h5>
                             <pre><code class="language-bash bg-body-tertiary">git reset --hard [取り消すプッシュの直前のコミットハッシュ値] </code></pre>
                             <code class="language-bash bg-body-tertiary">[取り消すプッシュの直前のコミットハッシュ値]</code> : <code class="language-bash bg-body-tertiary">git log</code>で確認
