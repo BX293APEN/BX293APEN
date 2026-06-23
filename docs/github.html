@@ -114,7 +114,8 @@ git log - [確認したいログの数]</code></pre>
 
                             <h6 class="mt-5 mb-3"> アップロードするファイルを指定 </h6>
 
-                            <pre><code class="language-bash bg-body-tertiary">git add [ファイル名, ディレクトリ名, -A:全て]</code></pre>
+                            <pre><code class="language-bash bg-body-tertiary">git add [ファイル名, ディレクトリ名, -A:全て]
+git add -A ":![除外したいファイル名/ディレクトリ名]" ":![除外したいファイル名2/ディレクトリ名2]"</code></pre>
 
                             <h6 class="mt-5 mb-3"> ローカルリポジトリにコミット </h6>
                             <pre><code class="language-bash bg-body-tertiary">git commit -m "コメント"</code></pre>
