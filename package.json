@@ -1,0 +1,17 @@
+{
+    "name": "camo-purge-action",
+    "version": "1.0.0",
+    "main": "src/cache_purge.mjs",
+    "scripts": {
+        "purge": "node src/cache_purge.mjs"
+    },
+    "dependencies": {
+        "@octokit/rest": "^20.1.2",
+        "node-fetch": "^3.3.2"
+    },
+    "description": "",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "module"
+}
