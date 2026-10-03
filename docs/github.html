@@ -228,7 +228,7 @@ git branch -D [過去の変更まで完全削除したいブランチ]</code></p
                             <h5 class="mt-5 mb-3"> マージの取り消し </h5>
                             <pre><code class="language-bash bg-body-tertiary">git merge --abort</code></pre>
 
-                            <h4 class="mt-5 mb-3"> 履歴を別ブランチに移し、最新の状態のみ保持したmainブランチを作成する </h4>
+                            <h4 class="mt-5 mb-3"> 履歴を別ブランチに移し、最新の状態のみ保持したmainブランチを作成する(初回のみ) </h4>
                             <dl>
                                 <dt>
                                     1. 現在のmainブランチをarchiveブランチにリネームする
@@ -248,6 +248,38 @@ git commit -m "Initial commit"</code></pre>
                                 </dt>
                                 <dd>
                                     <pre><code class="language-bash bg-body-tertiary">git push -f origin main
+git push -u origin archive</code></pre>
+                                </dd>
+                            </dl>
+
+                            <h4 class="mt-5 mb-3"> 履歴を別ブランチに移し、最新の状態のみ保持したmainブランチを作成する(2回目以降) </h4>
+                            <dl>
+                                <dt>
+                                    1. archiveブランチに履歴を全て移す
+                                </dt>
+                                <dd>
+                                    <pre><code class="language-bash bg-body-tertiary">git switch archive
+git restore --source=main --worktree --staged -A
+git commit -m "Save archive"
+git push
+</code></pre>
+                                </dd>
+                                <dt>
+                                    2. 履歴なしの新しいmainブランチを作成し、現在のファイルをコミットする
+                                </dt>
+                                <dd>
+                                    <pre><code class="language-bash bg-body-tertiary">git switch main
+git checkout --orphan tmp
+git add -A
+git commit -m "Initial commit"
+git branch -D main
+git branch -m main</code></pre>
+                                </dd>
+                                <dt>
+                                    3. リモートリポジトリにpushして適用
+                                </dt>
+                                <dd>
+                                    <pre><code class="language-bash bg-body-tertiary">git push -u origin main -f
 git push -u origin archive</code></pre>
                                 </dd>
                             </dl>
