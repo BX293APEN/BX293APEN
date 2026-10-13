@@ -52,9 +52,9 @@
 |---|---|---|---|---|---|---|---|---|
 | Git | Git | バージョン管理ツール | 変更履歴の記録 | <ul><li>commit</li><li>branch</li><li>merge</li></ul> | - | - | コミット履歴 | <ul><li>CI/CD のトリガー元<ul><li>push</li><li>merge</li></ul></li></ul> |
 | GitHub | GitHub | Git リポジトリのホスティングサービス | <ul><li>共同開発の場</li><li>CI/CD 実行基盤 (GitHub Actions) の提供</li></ul> | <ul><li>Pull Request</li><li>コードレビュー</li><li>Actions の実行</li></ul> | - | - | <ul><li>リポジトリ</li><li>Actions の実行結果</li></ul> | CI/CD を実現するプラットフォームの一つ |
-| CI | Continuous Integration (継続的インテグレーション) | 開発・リリースの自動化手法 | <ul><li>コード変更を頻繁に統合する</li><li>早期に問題を検出する</li></ul> | <ol><li>ビルド</li><li>単体テスト</li><li>静的解析</li><li>Lint</li></ol> | <ul><li>push</li><li>Pull Request</li></ul> | なし (本番反映は対象外) | <ul><li>テスト結果</li><li>ビルド成果物</li></ul> | <ul><li>GitHub Actions で実現</li><li>GitHub 以外でも実現可能<ul><li>Jenkins</li><li>GitLab CI</li><li>CircleCI</li></ul></li></ul> |
-| CD (Continuous Delivery) | Continuous Delivery (継続的デリバリー) | 開発・リリースの自動化手法 | 常にリリース可能な状態を保つ | <ol><li>ステージング環境へのデプロイ</li><li>結合テスト</li><li>リリース成果物の作成</li></ol> | CI の成功 | <strong>手動承認</strong>が必要 | <ul><li>リリース候補<ul><li>パッケージ</li><li>コンテナイメージ</li></ul></li></ul> | <ul><li>GitHub Actions + Environments で実現</li><li>GitHub 以外でも実現可能</li></ul> |
-| CD (Continuous Deployment) | Continuous Deployment (継続的デプロイ) | 開発・リリースの自動化手法 | 変更を自動で本番環境まで反映する | <ol><li>本番環境へのデプロイ</li><li>ヘルスチェック</li><li>ロールバック</li></ol> | CI の成功 | <strong>自動</strong>で反映 | 稼働中の本番サービス | <ul><li>GitHub Actions + Environments で実現</li><li>GitHub 以外でも実現可能</li></ul> |  
+| CI | Continuous Integration <br>(継続的インテグレーション) | 開発・リリースの自動化手法 | <ul><li>コード変更を頻繁に統合する</li><li>早期に問題を検出する</li></ul> | <ol><li>ビルド</li><li>単体テスト</li><li>静的解析</li><li>Lint</li></ol> | <ul><li>push</li><li>Pull Request</li></ul> | なし (本番反映は対象外) | <ul><li>テスト結果</li><li>ビルド成果物</li></ul> | <ul><li>GitHub Actions で実現</li><li>GitHub 以外でも実現可能<ul><li>Jenkins</li><li>GitLab CI</li><li>CircleCI</li></ul></li></ul> |
+| CD | Continuous Delivery <br>(継続的デリバリー) | 開発・リリースの自動化手法 | 常にリリース可能な状態を保つ | <ol><li>ステージング環境へのデプロイ</li><li>結合テスト</li><li>リリース成果物の作成</li></ol> | CI の成功 | <strong>手動承認</strong>が必要 | <ul><li>リリース候補<ul><li>パッケージ</li><li>コンテナイメージ</li></ul></li></ul> | <ul><li>GitHub Actions + Environments で実現</li><li>GitHub 以外でも実現可能</li></ul> |
+| CD | Continuous Deployment <br>(継続的デプロイ) | 開発・リリースの自動化手法 | 変更を自動で本番環境まで反映する | <ol><li>本番環境へのデプロイ</li><li>ヘルスチェック</li><li>ロールバック</li></ol> | CI の成功 | <strong>自動</strong>で反映 | 稼働中の本番サービス | <ul><li>GitHub Actions + Environments で実現</li><li>GitHub 以外でも実現可能</li></ul> |  
 
 <br>
 <br>
