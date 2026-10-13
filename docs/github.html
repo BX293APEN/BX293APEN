@@ -17,7 +17,7 @@
     </head>
     <body>
         <div id="header-contents"></div>
-        <div class="container pt-3">
+        <div class="pt-4 ps-4">
             <main>
                 <div class="row g-5">
                     <div class="col-md-8">
@@ -44,6 +44,41 @@
                                     </tr>
                                 </table>
                             </p>
+                            <br>
+                            <br>
+                            <div id="md-git">
+
+| 項目 | 正式名称 | 位置づけ | 役割・目的 | 主な作業 | トリガー | 本番反映の判断 | 成果物 | 他ツールとの関係 |
+|---|---|---|---|---|---|---|---|---|
+| Git | Git | バージョン管理ツール | 変更履歴の記録 | <ul><li>commit</li><li>branch</li><li>merge</li></ul> | - | - | コミット履歴 | <ul><li>CI/CD のトリガー元<ul><li>push</li><li>merge</li></ul></li></ul> |
+| GitHub | GitHub | Git リポジトリのホスティングサービス | <ul><li>共同開発の場</li><li>CI/CD 実行基盤 (GitHub Actions) の提供</li></ul> | <ul><li>Pull Request</li><li>コードレビュー</li><li>Actions の実行</li></ul> | - | - | <ul><li>リポジトリ</li><li>Actions の実行結果</li></ul> | CI/CD を実現するプラットフォームの一つ |
+| CI | Continuous Integration (継続的インテグレーション) | 開発・リリースの自動化手法 | <ul><li>コード変更を頻繁に統合する</li><li>早期に問題を検出する</li></ul> | <ol><li>ビルド</li><li>単体テスト</li><li>静的解析</li><li>Lint</li></ol> | <ul><li>push</li><li>Pull Request</li></ul> | なし (本番反映は対象外) | <ul><li>テスト結果</li><li>ビルド成果物</li></ul> | <ul><li>GitHub Actions で実現</li><li>GitHub 以外でも実現可能<ul><li>Jenkins</li><li>GitLab CI</li><li>CircleCI</li></ul></li></ul> |
+| CD (Continuous Delivery) | Continuous Delivery (継続的デリバリー) | 開発・リリースの自動化手法 | 常にリリース可能な状態を保つ | <ol><li>ステージング環境へのデプロイ</li><li>結合テスト</li><li>リリース成果物の作成</li></ol> | CI の成功 | <strong>手動承認</strong>が必要 | <ul><li>リリース候補<ul><li>パッケージ</li><li>コンテナイメージ</li></ul></li></ul> | <ul><li>GitHub Actions + Environments で実現</li><li>GitHub 以外でも実現可能</li></ul> |
+| CD (Continuous Deployment) | Continuous Deployment (継続的デプロイ) | 開発・リリースの自動化手法 | 変更を自動で本番環境まで反映する | <ol><li>本番環境へのデプロイ</li><li>ヘルスチェック</li><li>ロールバック</li></ol> | CI の成功 | <strong>自動</strong>で反映 | 稼働中の本番サービス | <ul><li>GitHub Actions + Environments で実現</li><li>GitHub 以外でも実現可能</li></ul> |  
+
+<br>
+<br>
+
+### 開発フロー  
+
+
+| 順序 | 段階 | 操作 | 担当 | GitHub の機能 | 結果 | 補足 |
+|---|---|---|---|---|---|---|
+| 1 | ソース管理 | feature ブランチで開発し push | 開発者 | <ul><li>リポジトリ</li><li>ブランチ</li><li>コミット</li></ul> | GitHub にコードが反映される | Git のホスティング基盤 |
+| 2 | 変更の提案 | Pull Request を作成 | 開発者 | Pull Request | CI が自動起動 (<strong>CI</strong>) | CI の実行契機になる |
+| 3 | CI (ビルド・テスト) | <ul><li>ビルド</li><li>テスト</li><li>Lint</li></ul>を実行 | GitHub Actions | GitHub Actions | 成功 / 失敗がステータスに表示される | <code>.github/workflows/*.yml</code> で定義 |
+| 4 | セキュリティ検査 | <ul><li>脆弱性の検出</li><li>秘密情報の検出</li></ul> | GitHub Actions (自動) | <ul><li>Dependabot</li><li>Code scanning</li><li>Secret scanning</li></ul> | 問題があれば検出結果が通知される | CI の一部として実行可能 |
+| 5 | 品質ゲート・レビュー | コードレビューと承認 | レビュアー | <ul><li>Branch protection rules</li><li>Required status checks</li></ul> | merge 可能になる | CI 失敗時は merge を禁止できる |
+| 6 | merge | main ブランチへ merge | 開発者 | Pull Request | CD ワークフローが起動 (<strong>CD</strong>) | - |
+| 7 | 成果物の保管 | ビルド成果物・イメージを保存 | GitHub Actions | <ul><li>GitHub Packages</li><li>Artifacts</li><li>Releases</li></ul> | リリース候補が保管される | コンテナや各種パッケージに対応 |
+| 8 | CD (デリバリー) | ステージングへ配備 | GitHub Actions | <ul><li>Environments</li><li>Secrets</li><li>Variables</li><li>OIDC</li></ul> | リリース候補が確認可能になる | 認証情報は Secrets や OIDC で安全に受け渡し |
+| 9 | 承認 | 本番配備を承認 (Continuous Delivery の場合) | 承認者 | Environments の Required reviewers | 本番配備が許可される | 手動承認フローを実現 |
+| 10 | CD (デプロイ) | 本番へ配備 | GitHub Actions | GitHub Actions + Environments | サービスが更新される | <ul><li>クラウドと連携<ul><li>AWS</li><li>Azure</li><li>GCP</li></ul></li></ul> |
+
+<br>
+<br>
+
+                            </div>
 
                             <h3 class="mt-5 mb-3" id="command" > gitコマンドの使い方 </h3>
                             <a href ="https://gitforwindows.org/"> 
@@ -385,6 +420,7 @@ git branch -m main</code></pre>
         <script src="/view/highlight.min.js"></script>
         <script src="/view/activenav.js"></script>
         <script src="/view/tips/tips.js"></script>
+        <script src="/view/md.js"></script>
         <script>
             hljs.highlightAll();
             embedded_html("/template/styleConfig.html", "styleList");
@@ -392,6 +428,16 @@ git branch -m main</code></pre>
             embedded_html("/template/footer.html", "footer-contents");
             window.addEventListener("load", active_nav("tipsIndex"));
             new TipsView(tipsModel, "tips", "tips", ["vimTip", "linuxTip", "pythonTip"]);
+
+            const mdLists = [
+                "md-git", 
+            ];
+
+            for (const mdID of mdLists) {
+                new MarkDownMaker(
+                    id              = mdID,
+                )
+            }
         </script>
     </footer>
 </html>
